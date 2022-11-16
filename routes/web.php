@@ -23,6 +23,8 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [TemaController::class, 'home']);
 Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
 Route::any('/accesso', [TemaController::class, 'accesso']);
+Route::any('/registrati', [TemaController::class, 'registrati']);
+Route::any('/registraUtente', [TemaController::class, 'registraUtente']);
 
 Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
 Route::any('/dashboard', [AdminController::class, 'dashboard']);

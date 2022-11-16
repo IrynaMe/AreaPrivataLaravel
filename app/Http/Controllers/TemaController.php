@@ -18,6 +18,27 @@ class TemaController extends Controller
         {
             return view('front.areaUtenti');
         }
+    
+    public function registrati()
+        {
+            return view('front.registrati');
+        }
+    
+    public function registraUtente(Request $request)
+        {
+            $customer = new Customer();
+            $customer->email=$request->email_reg;
+            $customer->password = md5($request->psw_reg);
+            $customer->nome=$request->name_reg;
+            $customer->save();
+    
+            Session::put('success', 'Utente creato');
+            Session::put('Customer', $customer);
+    
+            return redirect('/areaUtenti');
+    
+            // return view('amministrazione.salvaUtenti');
+        }
 
     public function accesso(Request $request)
     {

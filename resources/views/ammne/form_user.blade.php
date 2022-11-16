@@ -23,10 +23,10 @@
                     <input type="password" class="form-control form-control-sm" id="psw_utente_conferma"
                         name="psw_utente_conferma">
                 </div>
-                <div class="form-check">
+                {{--                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" onclick="mostraPsw()">
                     <label class="form-check-label" for="exampleCheck1">Mostra Password</label>
-                </div>
+                </div> --}}
                 <br>
                 <div class="form-group" style="font-size:20px; font-weight:bold">
 

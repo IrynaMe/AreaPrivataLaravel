@@ -21,7 +21,6 @@
 
 
                             <form role="form" id="contact-form" action="/accesso" method="post">
-
                                 @csrf
                                 <!-- name field -->
                                 <div class="form-group">
@@ -59,7 +58,7 @@
                             </form>
 
                             <div class="text-center">
-                                <h2><a href="registrati.php" style="color:white !important;">Registrati</a></h2>
+                                <h2><a href={{ url('/registrati') }} style="color:white !important;">Registrati</a></h2>
                                 <br>
                             </div>
 

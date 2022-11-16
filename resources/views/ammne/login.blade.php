@@ -46,11 +46,11 @@
 
                             <input type="password" class="form-control form-control-sm" id="psw_log" name="password">
                         </div>
-                        <div class="form-check">
+                        {{--                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" onclick="mostraPswlog()">
                             <label class="form-check-label" for="exampleCheck1">
                                 Mostra Password</label>
-                        </div>
+                        </div> --}}
                         <button type="submit" class="btn btn-primary btn-block">Invia</button>
 
                     </form>

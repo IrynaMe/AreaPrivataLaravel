@@ -22,6 +22,24 @@ use App\Http\Controllers\AdminController;
 
 Route::get('/', [TemaController::class, 'home']);
 Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
-Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
 Route::any('/accesso', [TemaController::class, 'accesso']);
+
+Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
+Route::any('/dashboard', [AdminController::class, 'dashboard']);
+Route::any('/login', [AdminController::class, 'login']);
+
+//gestione Utenti
+//crea utenti
+Route::any('/creaUtenti', [AdminController::class, 'creaUtenti']);
+//lista utenti
+Route::get('/listaUtenti', [AdminController::class, 'listaUtenti']);
+//modifica utente
+Route::any('/editCustomer/{id}', [AdminController::class, 'editCustomer']);
+Route::any('/aggiornaCustomer', [AdminController::class, 'aggiornaCustomer']);
+//save user
+Route::any('/salvaUtenti', [AdminController::class, 'salvaUtenti']);
+
+//delete user
+Route::any('/delete/{id}', [AdminController::class, 'delete']);
+
 

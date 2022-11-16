@@ -25,6 +25,7 @@ class TemaController extends Controller
         'password' => 'required' ]);
 
         $Customer  = Customer::where('email', $request->input('email'))->first();
+       
 
         if ($Customer) {
             $password=md5($request->input('password'));

@@ -1,9 +1,15 @@
-@extends('front.layout')
+@extends('front/layout')
 @section('content')
-    <?php ob_start(); ?>
     <div class="container">
 
         @include('front.menu')
+        @if (Session::has('status'))
+            <div class="alert alert-primary" role="alert">
+                <h3> {{ Session::get('status') }}</h3>
+
+                {{ Session::put('status', null) }}
+            </div>
+        @endif
 
 
         <div id="footer">

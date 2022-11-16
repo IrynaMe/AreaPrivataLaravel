@@ -21,3 +21,7 @@ use App\Http\Controllers\AdminController;
  */
 
 Route::get('/', [TemaController::class, 'home']);
+Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
+Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
+Route::any('/accesso', [TemaController::class, 'accesso']);
+

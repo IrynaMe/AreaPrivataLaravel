@@ -3,7 +3,7 @@
     <?php ob_start(); ?>
     <div class="container">
 
-        {{-- @include('menu.php'); --}}
+        @include('front.menu')
 
 
         <div id="footer">
@@ -14,8 +14,9 @@
                             <h1 style="color:white" id="log">Accedi</h1>
 
 
-                            <form role="form" id="contact-form" action="signup/log/index.php" method="post"
-                                onsubmit="return checkForm_log(this);">
+                            <form role="form" id="contact-form" action="/accesso" method="post">
+
+                                @csrf
                                 <!-- name field -->
                                 <div class="form-group">
                                     <div id="nameError" class="sr-only" role="alert"></div>
@@ -23,8 +24,8 @@
                                     <div class="input-group">
                                         <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                         </div>
-                                        <input type="text" class="form-control" id="email_log" value=""
-                                            placeholder="email" name="email_log">
+                                        <input type="email" class="form-control" id="email_log" value=""
+                                            placeholder="email" name="email">
                                     </div>
                                 </div>
                                 <!-- email field -->
@@ -33,8 +34,8 @@
                                     <label for="form-email-field" class="sr-only">Password</label>
                                     <div class="input-group">
                                         <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
-                                        <input type="password" class="form-control" id="psw_log" value=""
-                                            placeholder="password" name="psw_log">
+                                        <input type="password" class="form-control" id="password" value=""
+                                            placeholder="il tuo password" name="password">
                                     </div>
                                 </div>
 
@@ -69,6 +70,3 @@
     </div>
     <br>
 @endsection
-
-
-{{-- @include('footer.php'); --}}

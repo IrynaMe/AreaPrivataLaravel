@@ -35,9 +35,11 @@ class TemaController extends Controller
             $customer->password = md5($request->psw_reg);
             $customer->nome=$request->name_reg;
             $customer->save();
-    
+            $customerName=($customer->nome);
             Session::put('success', 'Utente creato');
             Session::put('Customer', $customer);
+            
+            Session::put('customerName', $customerName);
     
             return redirect('/contatti');
     
@@ -60,8 +62,9 @@ class TemaController extends Controller
             if ($password == $passwordDB) {
             Session::put('Customer', $Customer);
                 // echo 'passo da qui';
-
-                return redirect('/contatti')->with('status', 'Utente loggato correttamente');
+            $customerName=($Customer->nome);
+            Session::put('customerName', $customerName);
+            return redirect('/contatti')->with('status', 'Utente loggato correttamente');
                 
             } else {
                 return back()->with('status', 'Email o password non corretta');

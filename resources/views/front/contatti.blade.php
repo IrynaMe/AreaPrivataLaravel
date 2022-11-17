@@ -4,7 +4,16 @@
         <div class="container">
 
             @include('front.menu')
-
+            @if (Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                    <h4>{{ Session::get('success') }}</h4>
+                </div>
+            @endif
+            @if (Session::has('customerName'))
+                <div class="alert alert-success" role="alert">
+                    <h4>Welcome, {{ Session::get('customerName') }} !</h4>
+                </div>
+            @endif
 
             <br>
             <br>

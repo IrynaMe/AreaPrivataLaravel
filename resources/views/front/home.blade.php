@@ -44,17 +44,21 @@
                                     </div>
                                 </div>
 
-
+                                <div class="checkbox">
+                                    <label id="label">
+                                        <input type="checkbox" id="checkbox-form" onclick="showPassword()">Mostra Password
+                                    </label>
+                                </div>
 
                                 <div class="checkbox">
                                     <label id="label">
-                                        <input type="checkbox" id="checkbox-form">accetto le regole privacy </label>
+                                        <input type="checkbox" id="checkbox-form">Accetto le regole privacy </label>
                                 </div>
                                 <br>
-                                <div id="mostra"></div>
+
                                 <br>
                                 <button type="submit" class="btn btn-success btn-block">Invia</button>
-                                <!--                            <div id="mostra"></div>-->
+
                             </form>
 
                             <div class="text-center">
@@ -75,3 +79,14 @@
     </div>
     <br>
 @endsection
+
+<script>
+    function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>

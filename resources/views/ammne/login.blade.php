@@ -11,15 +11,7 @@
 
         </div>
     @endif
-    {{--         <div class="alert alert-primary" role="alert">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div> 
 
-    @endif --}}
     @if (Session::has('status'))
         <div class="alert alert-warning" role="alert">
             {{ Session::get('status') }}
@@ -46,11 +38,11 @@
 
                             <input type="password" class="form-control form-control-sm" id="psw_log" name="password">
                         </div>
-                        {{--                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" onclick="mostraPswlog()">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" onclick="showPassword()">
                             <label class="form-check-label" for="exampleCheck1">
                                 Mostra Password</label>
-                        </div> --}}
+                        </div>
                         <button type="submit" class="btn btn-primary btn-block">Invia</button>
 
                     </form>
@@ -58,3 +50,16 @@
             </div>
         </div>
     </div>
+
+
+
+    <script>
+        function showPassword() {
+            var x = document.getElementById("psw_log");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>

@@ -122,7 +122,7 @@
 <script src="{{ url('tema/js/control_mail.js') }}"></script>
 
 <!-- film di Ajax https://www.youtube.com/watch?v=RmibuT2JsnM-->
-<script type="text/javascript">
+{{-- <script type="text/javascript">
     $("#psw_log,#email_log").on("keyup", verificata);
 
     function verificata() {
@@ -169,7 +169,7 @@
 
         }
     }
-</script>
+</script> --}}
 
 
 </html>

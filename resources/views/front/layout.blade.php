@@ -170,24 +170,15 @@
 
         if (ritorno == "true") {
 
-            $("#mostra").html(
+            $("#mostra").php(
                 "<h4 style='color:white; text-align:center;font-size:25px;text-shadow:3px 3px 3px black'>utente e password  validi</h4>"
             );
-
-
-
         }
         if (ritorno == "non true") {
 
-            $("#mostra").html(
+            $("#mostra").php(
                 "<h5 style='color:white; text-align:center;font-size:19px;text-shadow:13px 13px 13px black'>utente e/o password non validi</h5>"
             );
-
-
-
-
-
-
         }
     }
 </script>

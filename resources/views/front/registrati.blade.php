@@ -50,10 +50,16 @@ if (isset($_SESSION['testo'])){
                                     <div id="emailError" class="sr-only" role="alert"></div>
                                     <label for="form-email-field" class="sr-only">Nome</label>
                                     <div class="input-group">
-                                        <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
                                         <input type="text" class="form-control" id="name_reg" value=""
                                             placeholder="your name" name="name_reg">
                                     </div>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label id="label">
+                                        <input type="checkbox" id="checkbox-form" onclick="showPassword()">Mostra Password
+                                    </label>
                                 </div>
 
                                 <div class="checkbox">
@@ -76,3 +82,14 @@ if (isset($_SESSION['testo'])){
 
     </div>
 @endsection
+
+<script>
+    function showPassword() {
+        var x = document.getElementById("psw_reg");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>

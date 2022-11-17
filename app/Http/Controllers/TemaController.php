@@ -18,6 +18,10 @@ class TemaController extends Controller
         {
             return view('front.areaUtenti');
         }
+    public function contatti()
+        {
+            return view('front.contatti');
+        }
     
     public function registrati()
         {
@@ -35,7 +39,7 @@ class TemaController extends Controller
             Session::put('success', 'Utente creato');
             Session::put('Customer', $customer);
     
-            return redirect('/areaUtenti');
+            return redirect('/contatti');
     
             // return view('amministrazione.salvaUtenti');
         }
@@ -54,10 +58,10 @@ class TemaController extends Controller
             $passwordDB= ($Customer->password);
             echo $passwordDB;
             if ($password == $passwordDB) {
-                Session::put('Customer', $Customer);
+            Session::put('Customer', $Customer);
                 // echo 'passo da qui';
 
-                return redirect('/areaUtenti')->with('status', 'Utente loggato correttamente');
+                return redirect('/contatti')->with('status', 'Utente loggato correttamente');
                 
             } else {
                 return back()->with('status', 'Email o password non corretta');

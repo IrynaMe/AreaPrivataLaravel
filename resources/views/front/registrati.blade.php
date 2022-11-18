@@ -22,6 +22,16 @@ if (isset($_SESSION['testo'])){
 
                             <form action="/registraUtente" method="post">
                                 @csrf
+                                <!-- Campo per il nome -->
+                                <div class="form-group">
+                                    <div id="emailError" class="sr-only" role="alert"></div>
+                                    <label for="form-email-field" class="sr-only">Nome</label>
+                                    <div class="input-group">
+                                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                                        <input type="text" class="form-control" id="name_reg" value=""
+                                            placeholder="your name" name="name_reg">
+                                    </div>
+                                </div>
                                 <!-- name field -->
                                 <div class="form-group">
                                     <div id="nameError" class="sr-only" role="alert"></div>
@@ -44,23 +54,14 @@ if (isset($_SESSION['testo'])){
                                             placeholder="password" name="psw_reg">
                                     </div>
                                 </div>
-
-                                <!-- Campo per il nome -->
-                                <div class="form-group">
-                                    <div id="emailError" class="sr-only" role="alert"></div>
-                                    <label for="form-email-field" class="sr-only">Nome</label>
-                                    <div class="input-group">
-                                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
-                                        <input type="text" class="form-control" id="name_reg" value=""
-                                            placeholder="your name" name="name_reg">
-                                    </div>
-                                </div>
-
                                 <div class="checkbox">
                                     <label id="label">
                                         <input type="checkbox" id="checkbox-form" onclick="showPassword()">Mostra Password
                                     </label>
                                 </div>
+
+
+
 
                                 <div class="checkbox">
                                     <label id="label">

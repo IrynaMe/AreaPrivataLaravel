@@ -33,9 +33,9 @@ class AdminController extends Controller
 
         if ($Amministratore) {
             $password=md5($request->input('password'));
-            echo $password."<br>";
+            //echo $password."<br>";
             $passwordDB= ($Amministratore->password);
-            echo $passwordDB;
+            //echo $passwordDB;
             if ($password == $passwordDB) {
                 Session::put('amministratore', $Amministratore);
                 // echo 'passo da qui';

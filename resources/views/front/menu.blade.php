@@ -63,7 +63,8 @@ if(isset(  $_SESSION['email_reg'])){
 
             <ul class="nav navbar-nav navbar-right">
 
-                <li><a href="{{ url('/login') }}">Area riservata: Admin</a></li>
+                <li><a href="{{ url('/login') }}">Area riservata: Admin <span
+                            class="glyphicon glyphicon-cog mx-5"></span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

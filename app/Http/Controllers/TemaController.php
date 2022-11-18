@@ -36,7 +36,7 @@ class TemaController extends Controller
             $customer->nome=$request->name_reg;
             $customer->save();
             $customerName=($customer->nome);
-            Session::put('success', 'Utente creato');
+            Session::put('success', 'Account creato con sucesso!');
             Session::put('Customer', $customer);
             
             Session::put('customerName', $customerName);
@@ -56,9 +56,9 @@ class TemaController extends Controller
 
         if ($Customer) {
             $password=md5($request->input('password'));
-            echo $password."<br>";
+            //echo $password."<br>";
             $passwordDB= ($Customer->password);
-            echo $passwordDB;
+            //echo $passwordDB;
             if ($password == $passwordDB) {
             Session::put('Customer', $Customer);
                 // echo 'passo da qui';

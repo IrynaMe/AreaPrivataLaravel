@@ -12,7 +12,7 @@
         <div class="contact-form">
             <!-- Form -->
 
-            <form role="form" id="contact-us" action="mail/mail_invio.php" method="post"
+            <form role="form" id="contact-us" action="mail_invio.php" method="post"
                 onsubmit="return checkForm_mail(this);">
                 <!-- Left Inputs -->
                 <div class="container">
@@ -44,6 +44,10 @@
                     <!-- Send Button -->
                     <button type="submit" id="submit" name="submit" class="form-btn semibold btn-block">Invia
                         messaggio</button>
+
+                    <?php
+                    
+                    ?>
 
 
                     <div style="text-align:center;" id="invio">

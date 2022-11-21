@@ -14,7 +14,13 @@
                     <h4>Welcome, {{ Session::get('customerName') }} !</h4>
                 </div>
             @endif
-
+            <div class="row">
+                <div class="col-6 offset-3" style="margin:20px auto; text-align:center;">
+                    <a href="/logout">
+                        <button type="button" class="btn btn-warning">Logout</button>
+                    </a>
+                </div>
+            </div>
             <br>
             <br>
             @include('front.form')

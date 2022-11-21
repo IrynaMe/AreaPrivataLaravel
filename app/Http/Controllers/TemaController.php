@@ -73,4 +73,10 @@ class TemaController extends Controller
             return back()->with('status', 'Non hai un account con questa email');
         }
     }
+
+    public function logout()
+    {
+        Session::forget('Customer');
+        return redirect('/');
+    }
 }

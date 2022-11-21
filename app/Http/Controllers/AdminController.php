@@ -50,6 +50,12 @@ class AdminController extends Controller
         }
     }
 
+    public function logout()
+        {
+            Session::forget('amministratore');
+            return redirect('/');
+        }
+
     public function creaUtenti()
     {
         return view('ammne.creaUtenti');

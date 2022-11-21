@@ -30,6 +30,7 @@ Route::any('/registraUtente', [TemaController::class, 'registraUtente']);
 Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
 Route::any('/dashboard', [AdminController::class, 'dashboard']);
 Route::any('/login', [AdminController::class, 'login']);
+Route::any('/logout', [AdminController::class, 'logout']);
 
 //gestione Utenti
 //crea utenti

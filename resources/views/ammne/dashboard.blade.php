@@ -43,7 +43,7 @@
     <div class="container" style="margin-top:40px;text-align:center;">
         <div class="row">
             <div class="col-6 offset-3">
-                <h2>Accedi in account o registrati </h2>
+                <h2>Accedi in account come Admin</h2>
             </div>
 
         </div>

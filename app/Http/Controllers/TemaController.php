@@ -28,7 +28,12 @@ class TemaController extends Controller
         }
     public function contatti()
         {
-            return view('front.contatti');
+            if (Session::has('Customer')){
+                return view('front.contatti');
+            } else {
+                return redirect('/areaUtenti')->with('status', 'You should login o register!');  
+            }
+            // return view('front.contatti');
         }
     
     public function registrati()

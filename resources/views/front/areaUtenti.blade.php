@@ -7,6 +7,23 @@
     </div>
 </div>
 @section('content')
+    @if ($errors->any())
+        <div class="alert alert-warning" role="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+
+        </div>
+    @endif
+
+    @if (Session::has('status'))
+        <div class="alert alert-warning" role="alert">
+            {{ Session::get('status') }}
+            {{ Session::put('status', null) }}
+        </div>
+    @endif
     <div class="container">
         <div class="row ">
             <div class="col-md-6  col-md-offset-3" style="margin-top:2%">

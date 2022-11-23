@@ -14,6 +14,14 @@ class TemaController extends Controller
         {
             return view('front.home');
         }
+    public function services()
+        {
+            return view('front.services');
+        }
+    public function about()
+        {
+            return view('front.about');
+        }
     public function areaUtenti()
         {
             return view('front.areaUtenti');

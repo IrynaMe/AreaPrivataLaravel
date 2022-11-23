@@ -1,5 +1,12 @@
-@extends('ammne/layout')
-<div class="container" style="margin-top:40px;text-align:center;">
+@extends('front/layout')
+<div class="header banr">
+    <div class="container">
+        <div class="header-top">
+            @include('front.menu')
+        </div>
+    </div>
+</div>
+@section('content')
 
     @if ($errors->any())
         <div class="alert alert-warning" role="alert">

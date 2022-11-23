@@ -1,187 +1,69 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="">
-<!--<![endif]-->
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
 
 <head>
-    <meta charset="UTF-8">
+    <title>Go Travel a Travel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <link href={{ 'tema/css/bootstrap.css' }} rel="stylesheet" type="text/css" media="all">
+
+    <link href={{ 'tema/css/style.css' }} rel="stylesheet" type="text/css" media="all" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TEST SMTP</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords"
+        content="Go Travel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href={{ 'tema/fonts.googleapis.com/css?family=Italiana' }} rel='stylesheet' type='text/css'>
+    <script src="tema/js/jquery-1.11.1.min.js"></script>
+    <link
+        href={{ 'tema/fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' }}
+        rel='stylesheet' type='text/css'>
+    <link href={{ 'tema/fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700' }} rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href={{ 'tema/css/font-awesome.min.css' }} />
 
-    <link rel="stylesheet" href="{{ url('tema/css/bootstrap.min.css') }}">
-    <!-- Latest compiled and minified CSS -->
-
-    {{-- <link rel="stylesheet" href="tema/css/style.css"> --}}
-    <link rel="stylesheet" href="{{ url('/tema/css/style.css') }}">
-
-    <link rel="stylesheet" href="{{ url('tema/css/style_contatti.css') }}">
-    <link rel="stylesheet" href="{{ url('tema/css/style_menu.css') }}">
-    <link rel="stylesheet" href="{{ url('tema/css/style_log.css') }}">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
-
-    <!--plug in di fancybox e flexslider-->
-    <!--
-<link rel="stylesheet" href="plugin/flexslider/css/flexslider.css" type="text/css">
-<link rel="stylesheet" href="plugin/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
--->
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-
-
-
-    <script src="{{ url('tema/js/jquery-2.1.1.js') }}"></script>
-    <script src="{{ url('tema/js/bootstrap.min.js') }}"></script>
-
-
+    <script src={{ 'tema/js/bootstrap.js' }}></script>
+    <script src={{ 'tema/js/responsiveslides.min.js' }}></script>
+    <script>
+        $(function() {
+            $("#slider").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                pager: true,
+            });
+        });
+    </script>
 
 </head>
 
-<body>
-    <br>
+
+
+@yield('content')
+
+
+
+<!--footer-->
+<div class="footer-section-wthree-agile">
     <div class="container">
-        <div class="row">
-            <!--
-<div class="col-md-2">
-    
-    <img src="img/logo/logo1.jpg" alt="" class="img-cerchio">
+        <div class="social-icons">
+            <a href="#"><i class="icon1"></i></a>
+            <a href="#"><i class="icon2"></i></a>
+            <a href="#"><i class="icon3"></i></a>
+            <a href="#"><i class="icon4"></i></a>
+        </div>
+        <div class="footer-top-w3ls-agileits">
+            <p>&copy; 2017 Go Travel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+        </div>
+    </div>
 </div>
--->
-            <!--
-<div class="col-md-11 col-md-offset-1">
-<header>
- <img src="img/logo/logo.png" width="80%" class="text-center" alt="">
- </header>
- </div>
--->
-        </div>
-    </div>
-    <br>
-
-    @yield('content')
-
-
-    <div class="container">
-
-        <br>
-        <div class="col-md-12">
-            <div class="col-md-4 col-xs-6 col-sm-4">
-
-
-                <img src="{{ url('tema/img/logo/logo1.jpg') }}" width="60" height="70" alt=""
-                    style="float: left;margin-right: 30px;" class="thumbnail">
-
-                <p>Imparare<br><a href="#">Web</a></p>
-                <a href="mailto:bollinilivio@gmail.com">Contattaci</a>
-            </div>
-
-            <div class="col-md-4 hidden-xs col-sm-4">
-
-                <!--
-               <button class="btn btn-info btn-lg">contattaci</button>
-               <p></p>
-               <br>
-           
-                <hr>
-                
-                <button class="btn btn-info btn-lg">news letter</button>
--->
-                <p style="margin-left: 40px;">Menu</p>
-
-
-            </div>
-            <div class="col-md-4 col-xs-6 col-sm-4 text-left">
-                <br>
-                <img src="{{ url('tema/img/logo/web.jpg') }}" width="70" height="60" alt=""
-                    style="float: left;margin-right: 30px;" class="thumbnail">
-                sito realizzato da <br>
-                <a href="">web per il marketing
-                </a> <br>
-                <br>
-                © Copyright.
-                Tutti i diritti riervati
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-    </div>
-
-
-
+<!--footer-->
 </body>
-
-
-
-<!--flexslider per fotografia -->
-<!--
-<script src="plugin/flexslider/js/jquery.flexslider.js"></script>
-<script src="js/flex.js"></script>
--->
-
-<!--carosello foto-->
-<!--
-<script src="plugin/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-<script src="js/fancy.js"></script>
--->
-<script src="{{ url('tema/js/jquery-2.1.1.js') }}"></script>
-<script src="{{ url('tema/js/control_reg.js') }}"></script>
-<script src="{{ url('tema/js/control_log.js') }}"></script>
-<script src="{{ url('tema/js/control_mail.js') }}"></script>
-
-<!-- film di Ajax https://www.youtube.com/watch?v=RmibuT2JsnM-->
-<script type="text/javascript">
-    $("#psw_log,#email_log").on("keyup", verificata);
-
-    function verificata() {
-
-        var contenuto = $("#psw_log").val();
-        var email_log = $("#email_log").val();
-
-        $.ajax({
-            type: "GET",
-            cache: false, // disabilita caching ajax       
-            url: "signup/psw_usr.php",
-            //data: "psw_log=" + contenuto
-            data: {
-                "psw_log": contenuto,
-                "email_log": email_log
-            },
-            success: mostra
-
-        });
-
-    }
-
-    function mostra(ritorno) {
-
-        if (ritorno == "true") {
-
-            $("#mostra").php(
-                "<h4 style='color:white; text-align:center;font-size:25px;text-shadow:3px 3px 3px black'>utente e password  validi</h4>"
-            );
-        }
-        if (ritorno == "non true") {
-
-            $("#mostra").php(
-                "<h5 style='color:white; text-align:center;font-size:19px;text-shadow:13px 13px 13px black'>utente e/o password non validi</h5>"
-            );
-        }
-    }
-</script>
-
 
 </html>

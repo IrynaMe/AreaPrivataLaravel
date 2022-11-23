@@ -1,39 +1,85 @@
-@if (Session::has('Customer'))
-
-    @extends('front/layout')
-    @section('content')
-        @if (Session::has('status'))
-            <div class="alert alert-success" role="alert" style="margin:20px auto; text-align:center;">
-                <h3> {{ Session::get('status') }}</h3>
-                {{ Session::put('status', null) }}
-            </div>
-        @endif
-        <div class="container" style="margin-top:40px;text-align:center;">
-            <div class="row">
-
-                <div class="col-6 offset-3">
-                    <h2>Welcome, Customer!!</h2>
-                </div>
-
-            </div>
-            <div class="row">
-                <div class="col-6 offset-3" style="margin:20px auto; text-align:center;">
-                    <a href="/logout">
-                        <button type="button" class="btn btn-warning">Logout</button>
-                    </a>
-                </div>
-            </div>
+@extends('front/layout')
+<div class="header banr">
+    <div class="container">
+        <div class="header-top">
+            @include('front.menu')
         </div>
-    @endsection
-@else
-    <div class="container" style="margin-top:40px;text-align:center;">
-        <div class="row">
+    </div>
+</div>
+@section('content')
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6  col-md-offset-3" style="margin-top:2%">
+                <div class="form-box">
+                    <h1 style="color:rgb(62, 56, 76); text-align:center;" id="log">Login</h1>
+                    <br>
 
-            <div class="col-6 offset-3">
-                <h2>Accedi in account o registrati </h2>
+
+                    <form role="form" id="contact-form" action="/accesso" method="post">
+                        @csrf
+                        <!-- name field -->
+                        <div class="form-group">
+                            <div id="nameError" class="sr-only" role="alert"></div>
+                            <label for="form-name-field" class="sr-only">Email</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </div>
+                                <input type="email" class="form-control" id="email_log" value="" placeholder="email"
+                                    name="email">
+                            </div>
+                        </div>
+                        <!-- email field -->
+                        <div class="form-group">
+                            <div id="emailError" class="sr-only" role="alert"></div>
+                            <label for="form-email-field" class="sr-only">Password</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+                                <input type="password" class="form-control" id="password" value=""
+                                    placeholder="your password" name="password">
+                            </div>
+                        </div>
+
+                        <div class="checkbox">
+                            <label id="label">
+                                <input type="checkbox" id="checkbox-form" onclick="showPassword()">Show password
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label id="label">
+                                <input type="checkbox" id="checkbox-form">Accept Privacy Policy </label>
+                        </div>
+                        <br>
+
+                        <br>
+                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+
+                    </form>
+
+                    <div class="text-center">
+                        <h2><a href={{ '/registrati' }}
+                                style="color:rgb(62, 56, 76); text-align:center; !important;">Register a
+                                new account</a>
+                        </h2>
+                        <br>
+                    </div>
+
+
+
+                    <br>
+                </div>
             </div>
 
         </div>
     </div>
-
-@endif
+@endsection
+<script>
+    function showPassword() {
+        var x = document.getElementById("password");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>

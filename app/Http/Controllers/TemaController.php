@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
-
+use App\Models\Service;
+use App\Cart;
 use Session;
 
 
@@ -14,9 +15,11 @@ class TemaController extends Controller
         {
             return view('front.home');
         }
-    public function services()
+        public function services()
         {
-            return view('front.services');
+          
+            $services= Service::paginate(3);
+            return view('front.services')->with('services', $services);
         }
     public function about()
         {
@@ -92,4 +95,41 @@ class TemaController extends Controller
         Session::forget('Customer');
         return redirect('/');
     }
+
+    public function cart()
+    {
+        if (!Session::has('cart')) {
+            return view('front.cart');
+        }
+
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+
+        return view('front.cart', ['services' => $cart->items]);
+        // return view('front.cart');
+    }
+public function addCart($id)
+    {
+        $service = Service::find($id);
+        
+        $oldCart = Session::has('cart')? Session::get('cart'):null;
+        $cart = new Cart($oldCart);
+        $cart->add($service, $id);
+        Session::put('cart', $cart);
+
+        //dd(Session::get('cart'));
+        return back();
+    }
+    public function update_qty(Request $request, $id)
+        {
+            $oldCart = Session::has('cart')? Session::get('cart'):null;
+            $cart = new Cart($oldCart);
+            
+            $cart->updateQty($id, $request->quantity);
+            
+            Session::put('cart', $cart);
+    
+            // dd(Session::get('cart'));
+            return back();
+        }
 }

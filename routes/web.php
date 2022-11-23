@@ -21,9 +21,12 @@ use App\Http\Controllers\AdminController;
  */
 
 Route::get('/', [TemaController::class, 'home']);
-Route::get('/services', [TemaController::class, 'services']);
+Route::any('/services', [TemaController::class, 'services']);
 Route::get('/about', [TemaController::class, 'about']);
 Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
+Route::any('/cart', [TemaController::class, 'cart']);
+Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
+Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
 //Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
 Route::get('/contatti', [TemaController::class, 'contatti']);
 Route::any('/accesso', [TemaController::class, 'accesso']);

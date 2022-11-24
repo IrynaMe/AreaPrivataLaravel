@@ -13,6 +13,42 @@ class AdminController extends Controller
         {
             return view('ammne.login');
         }
+
+    public function loginAmmre(Request $request)
+        {
+    
+            $this->validate($request, ['email' => 'email|required',
+                                       'password' => 'required' ]);
+    
+            $Amministratore  = Amministratore::where('email', $request->input('email'))->first();
+    
+            if ($Amministratore) {
+                $password=md5($request->input('password'));
+                //echo $password."<br>";
+                $passwordDB= ($Amministratore->password);
+                //echo $passwordDB;
+                if ($password == $passwordDB) {
+                    Session::put('amministratore', $Amministratore);
+                    // echo 'passo da qui';
+           
+                    return redirect('/dashboard')->with('status', 'Admin loggato correttamente');
+                
+                } else {
+                    return back()->with('status', 'Email o password non corretta');
+                }
+            } else {
+                return back()->with('status', 'Non hai un account con questa email');
+            }
+        }
+    
+        public function logout()
+            {
+                Session::forget('amministratore');
+                return redirect('/');
+            }
+    
+
+
     public function dashboard()
         {
             if (Session::has('amministratore')){
@@ -22,38 +58,8 @@ class AdminController extends Controller
             }
             // return view('ammne.dashboard');
         }
-    public function loginAmmre(Request $request)
-    {
 
-        $this->validate($request, ['email' => 'email|required',
-                                   'password' => 'required' ]);
 
-        $Amministratore  = Amministratore::where('email', $request->input('email'))->first();
-
-        if ($Amministratore) {
-            $password=md5($request->input('password'));
-            //echo $password."<br>";
-            $passwordDB= ($Amministratore->password);
-            //echo $passwordDB;
-            if ($password == $passwordDB) {
-                Session::put('amministratore', $Amministratore);
-                // echo 'passo da qui';
-       
-                return redirect('/dashboard')->with('status', 'Admin loggato correttamente');
-            
-            } else {
-                return back()->with('status', 'Email o password non corretta');
-            }
-        } else {
-            return back()->with('status', 'Non hai un account con questa email');
-        }
-    }
-
-    public function logout()
-        {
-            Session::forget('amministratore');
-            return redirect('/');
-        }
 
     public function creaUtenti()
     {

@@ -24,9 +24,9 @@ Route::get('/', [TemaController::class, 'home']);
 Route::any('/services', [TemaController::class, 'services']);
 Route::get('/about', [TemaController::class, 'about']);
 Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
-Route::any('/cart', [TemaController::class, 'cart']);
-Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
-Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
+
+//-------------------accesso---------
+
 //Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
 Route::get('/contatti', [TemaController::class, 'contatti']);
 Route::any('/accesso', [TemaController::class, 'accesso']);
@@ -38,7 +38,7 @@ Route::any('/dashboard', [AdminController::class, 'dashboard']);
 Route::any('/login', [AdminController::class, 'login']);
 Route::any('/logout', [AdminController::class, 'logout']);
 
-//gestione Utenti
+//-----------------------gestione Utenti
 //crea utenti
 Route::any('/creaUtenti', [AdminController::class, 'creaUtenti']);
 //lista utenti
@@ -51,5 +51,10 @@ Route::any('/salvaUtenti', [AdminController::class, 'salvaUtenti']);
 
 //delete user
 Route::any('/delete/{id}', [AdminController::class, 'delete']);
+
+//-------------------------CART
+Route::any('/cart', [TemaController::class, 'cart']);
+Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
+Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
 
 

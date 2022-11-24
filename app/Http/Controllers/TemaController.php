@@ -96,7 +96,9 @@ class TemaController extends Controller
         return redirect('/');
     }
 
-    public function cart()
+    //----------------------------------------CART
+
+public function cart()
     {
         if (!Session::has('cart')) {
             return view('front.cart');

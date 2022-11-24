@@ -46,6 +46,7 @@ class TemaController extends Controller
     
     public function registraUtente(Request $request)
         {
+            
             $customer = new Customer();
             $customer->email=$request->email_reg;
             $customer->password = md5($request->psw_reg);

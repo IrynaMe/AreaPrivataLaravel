@@ -19,7 +19,7 @@
     @endif
     <div class="row">
         <div class="col-6 offset-3" style="margin:5px auto; text-align:center;">
-            <a href="/logout">
+            <a href="/logoutUser">
                 <button type="button" class="btn btn-warning">Logout</button>
             </a>
         </div>

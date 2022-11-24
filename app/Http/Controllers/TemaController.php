@@ -90,10 +90,13 @@ class TemaController extends Controller
         }
     }
 
-    public function logout()
+    public function logoutUser()
     {
         Session::forget('Customer');
+        Session::forget('customerName');
+
         return redirect('/');
+
     }
 
     //----------------------------------------CART

@@ -30,20 +30,24 @@
                         </li>
                         <li><a href={{ '/about' }}>About</a></li>
                         <li><a href={{ '/services' }}>Services</a></li>
-                        <li><a href={{ '/cart' }}>Cart</a></li>
-                        <li><a href={{ '/areaUtenti' }}>Account</a></li>
+                        <li><a href={{ '/cart' }}>Cart <span
+                                    style="margin: 15px 0 0 -5px; padding:5px 10px;background-color:orange; color:white; 
+                        border-radius:50%">
+                                    {{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}</span></a></li>
 
-                        {{--                        <li class="dropdown">
-                            <a href="gallery.html" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
+                        <li class="dropdown profile_details_drop">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"
+                                    aria-hidden="true"></i><span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="codes.html">Codes</a></li>
-                                <li><a href="icons.html">Font Icons</a></li>
+                                @if (Session::has('Customer'))
+                                    <li><a href={{ '/logoutUser' }}>Logout</a></li>
+                                @else
+                                    <li><a href={{ '/areaUtenti' }}>Login</a></li>
+                                @endif
                             </ul>
-                        </li> 
+                        </li>
 
-                        <li><a href="contact.html">Contact</a></li> --}}
                     </ul>
                 </div>
                 <div class="col-3">

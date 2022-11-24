@@ -23,20 +23,24 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [TemaController::class, 'home']);
 Route::any('/services', [TemaController::class, 'services']);
 Route::get('/about', [TemaController::class, 'about']);
-Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
+
 
 //-------------------accesso---------
 
 //Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
+Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
 Route::get('/contatti', [TemaController::class, 'contatti']);
 Route::any('/accesso', [TemaController::class, 'accesso']);
 Route::any('/registrati', [TemaController::class, 'registrati']);
 Route::any('/registraUtente', [TemaController::class, 'registraUtente']);
+Route::any('/logoutUser', [TemaController::class, 'logoutUser']);
+
 
 Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
 Route::any('/dashboard', [AdminController::class, 'dashboard']);
 Route::any('/login', [AdminController::class, 'login']);
 Route::any('/logout', [AdminController::class, 'logout']);
+
 
 //-----------------------gestione Utenti
 //crea utenti

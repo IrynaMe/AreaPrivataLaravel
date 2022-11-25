@@ -61,4 +61,7 @@ Route::any('/cart', [TemaController::class, 'cart']);
 Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
 Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
 
+//-------------------MAIL
+Route::any('/mail', [TemaController::class, 'mail']);
+
 

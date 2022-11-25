@@ -9,12 +9,14 @@
 @section('content')
     @if (Session::has('success'))
         <div class="alert alert-success" role="alert">
-            <h4>{{ Session::get('success') }}</h4>
+            <h4> {{ Session::get('success') }}</h4>
+            {{ Session::now('success', null) }}
         </div>
     @endif
     @if (Session::has('customerName'))
         <div class="alert alert-success" role="alert">
-            <h4>Welcome, {{ Session::get('customerName') }} !</h4>
+            <h4>Welcome,{{ Session::get('customerName') }}!</h4>
+            {{ Session::now('customerName', null) }}
         </div>
     @endif
     {{--     <div class="row">

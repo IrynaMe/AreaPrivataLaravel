@@ -20,8 +20,8 @@
 
     @if (Session::has('status'))
         <div class="alert alert-warning" role="alert">
-            {{ Session::get('status') }}
-            {{ Session::put('status', null) }}
+            <h4> {{ Session::get('status') }}</h4>
+            {{ Session::now('status', null) }}
         </div>
     @endif
     <div class="container">

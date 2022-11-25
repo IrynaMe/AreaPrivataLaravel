@@ -84,7 +84,7 @@ class TemaController extends Controller
                 $customer->nome=$request->name_reg;
                 $customer->save();
                 $customerName=($customer->nome);
-                Session::put('success', 'Account creato con sucesso!');
+                Session::put('success', 'Account created successfully!');
                 Session::put('Customer', $customer);
                 Session::put('customerName', $customerName);
                 return redirect('/contatti');
@@ -156,6 +156,7 @@ public function addCart($id)
         //dd(Session::get('cart'));
         return back();
     }
+
     public function update_qty(Request $request, $id)
         {
             $oldCart = Session::has('cart')? Session::get('cart'):null;
@@ -167,5 +168,40 @@ public function addCart($id)
     
             // dd(Session::get('cart'));
             return back();
+        }
+
+    public function mail(Request $request)
+    {
+        // $customer->email=$request->email_reg;
+$mail_destinatario='inero@mail.ru';
+$nome_mittente=$request->nome;
+$mail_mittente=$request->email;
+$testo=$request->testo;
+
+$oggetto="contact request regading ".$request->oggetto;
+$mail_corpo="richiesta di contatto da ".$request->email." che scrive \r\n\n".$testo;
+$mail_headers="From: ".$nome_mittente."< ".$mail_mittente." > \r\n";
+$mail_headers .="X-mailer:PHP/".phpversion();
+
+if(mail($mail_destinatario, $oggetto, $mail_corpo, $mail_headers)) {
+    $mail=1;
+    Session::put('mail', $mail);
+    Session::put('nome', $nome_mittente);
+    Session::put('email', $mail_mittente);
+    Session::put('oggetto', $oggetto);
+    Session::put('testo', $testo);
+    return back()->with('status', 'Email was sent successfully! ');
+    
+}else{
+    $mail=0;
+    Session::put('mail', $mail);
+    return back()->with('status', 'Error! Email was not sent! ');
+}
+            // session_start();
+            //$nome_mittente=$_POST['nome'];
+            //$mail_mittente=$_POST['email'];
+            //$oggetto=$_POST['oggetto'];
+            //$testo=$_POST['testo'];
+
         }
 }

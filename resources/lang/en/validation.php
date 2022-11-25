@@ -141,11 +141,18 @@ return [
     |
     */
 
-    'custom' => [
+     'custom' => [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
     ],
+ 
+/* 'custom' => [
+    'name' => [
+        'required' => 'We need to know your name',
+        'min:2' => 'Name must contain at least 2 characters!'
+    ],
+], */
 
     /*
     |--------------------------------------------------------------------------
@@ -158,6 +165,10 @@ return [
     |
     */
 
-    'attributes' => [],
+'attributes' => [],
+ /*    'name' => [
+        'required' => 'We need to know your name',
+        'min:2' => 'Name must contain at least 2 characters!'
+    ], */
 
 ];

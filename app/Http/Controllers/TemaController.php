@@ -8,6 +8,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\Validator;
 use App\Cart;
 use Session;
+use Illuminate\Validation\Rules\Password;
 
 
 class TemaController extends Controller
@@ -54,39 +55,19 @@ class TemaController extends Controller
             $inputs = [
                 'email'=>$request->email_reg,
                 'password' => md5($request->psw_reg),
-                'nome'=>$request->name_reg
+                'name'=>$request->name_reg
             ]; 
-            /* $rules= [
-                'nome' => [
-                    'required' => 'We need to know your name!',
-                    'min:2'=> 'Name must contain at least 2 characters!'
-                ],
-                'email' => [
-                    'required' => 'We need to know your email address!',
-                    'email' => 'Your email shoul be written correctly!'
-                ],
-                    'password' => [
-                        'required' => 'Password is required!',
-                        'min:6'=> 'Password must contain at least 6 characters!',
-                        'regex:/[a-z]/' => 'Password must contain at least one lowercase letter ',
-                        'regex:/[A-Z]/' => 'Password must contain at least one uppercase letter ',
-                        'regex:/[0-9]/' => 'Password must contain at least one number ',
-                        'regex:/[@$!%*#?&]/' => 'Password must contain at least one special character ',
-                    ],
-            ]; */
             $rules = [
-                'name' => [
-                    'required',
-                    'min:2'
-                ],    
+                'name' => 'required|min:2|string',    
                 'email'    => 'required|email',
                 'password' => [
                     'required',
-                    'min:6',             // must be at least 6 characters in length
-                    'regex:/[a-z]/',      // must contain at least one lowercase letter
-                    'regex:/[A-Z]/',      // must contain at least one uppercase letter
-                    'regex:/[0-9]/',      // must contain at least one digit
-                    'regex:/[@$!%*#?&]/', // must contain a special character
+                    'string',
+                    Password::min(6)
+                        ->mixedCase()
+                        ->numbers()
+                        ->symbols()
+                        //->uncompromised()
                 ],
             ];
 
@@ -105,9 +86,7 @@ class TemaController extends Controller
                 $customerName=($customer->nome);
                 Session::put('success', 'Account creato con sucesso!');
                 Session::put('Customer', $customer);
-        
                 Session::put('customerName', $customerName);
-        
                 return redirect('/contatti');
             }
 

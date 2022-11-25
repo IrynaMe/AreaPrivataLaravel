@@ -54,7 +54,7 @@ class TemaController extends Controller
         {
             $inputs = [
                 'email'=>$request->email_reg,
-                'password' => md5($request->psw_reg),
+                'password' =>$request->psw_reg,
                 'name'=>$request->name_reg
             ]; 
             $rules = [
@@ -64,20 +64,20 @@ class TemaController extends Controller
                     'required',
                     'string',
                     Password::min(6)
-                        ->mixedCase()
+                        ->mixedcase()
                         ->numbers()
-                        ->symbols()
+                        //->symbols()
                         //->uncompromised()
                 ],
             ];
 
             $validation = Validator::make( $inputs, $rules)->validate();
-
+/* 
             if ( $validation->fails() ) {
                 print_r( $validation->errors()->all() );
             }
 
-            else{
+            else{ */
                 $customer = new Customer();
                 $customer->email=$request->email_reg;
                 $customer->password = md5($request->psw_reg);
@@ -88,7 +88,7 @@ class TemaController extends Controller
                 Session::put('Customer', $customer);
                 Session::put('customerName', $customerName);
                 return redirect('/contatti');
-            }
+            // }
 
 }
        

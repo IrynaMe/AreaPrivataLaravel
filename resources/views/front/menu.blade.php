@@ -35,18 +35,18 @@
                         border-radius:50%">
                                     {{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}</span></a></li>
 
-                        <li class="dropdown profile_details_drop">
+                        {{--                         <li class="dropdown profile_details_drop">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"
                                     aria-hidden="true"></i><span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                @if (Session::has('Customer'))
-                                    <li><a href={{ '/logoutUser' }}>Logout</a></li>
-                                @else
-                                    <li><a href={{ '/areaUtenti' }}>Login</a></li>
-                                @endif
-                            </ul>
-                        </li>
+                            <ul class="dropdown-menu"> --}}
+                        @if (Session::has('Customer'))
+                            <li><a href={{ '/logoutUser' }}>Logout</a></li>
+                        @else
+                            <li><a href={{ '/areaUtenti' }}>Login</a></li>
+                        @endif
+                        {{--                             </ul>
+                        </li> --}}
 
                     </ul>
                 </div>

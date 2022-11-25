@@ -115,7 +115,7 @@
 
 
     function checkForm_reg(form) {
-        if (form.email_reg.value == "") {
+        /* if (form.email_reg.value == "") {
             alert("Errore: la email non puo' essere bianca!");
 
             return false;
@@ -158,7 +158,7 @@
             alert("Errore: Controlla se hai inserito una password valida!");
 
             return false;
-        }
+        } */
 
         // checkbox
         var checkBox = document.getElementById("checkbox-form-pp");
@@ -169,7 +169,7 @@
             return false;
         }
 
-        alert("hai inserito una password valida: " + form.psw_reg.value);
-        return true;
+        /*         alert("hai inserito tutti i dati corettamente" + form.email_reg.value + form.psw_reg.value);
+                return true; */
     }
 </script>

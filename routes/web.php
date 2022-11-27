@@ -58,8 +58,11 @@ Route::any('/delete/{id}', [AdminController::class, 'delete']);
 
 //-------------------------CART
 Route::any('/cart', [TemaController::class, 'cart']);
+Route::any('/url', [TemaController::class, 'url']);
 Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
 Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
+Route::any('/remove/{id}', [TemaController::class, 'remove']);
+Route::any('/ProcediOrdine', [TemaController::class, 'ProcediOrdine']);
 
 //-------------------MAIL
 Route::any('/mail', [TemaController::class, 'mail']);

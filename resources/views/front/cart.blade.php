@@ -1,4 +1,4 @@
-@extends('front.layout')
+@extends('front/layout')
 <div class="header banr">
     <div class="container">
         <div class="header-top">
@@ -7,6 +7,8 @@
     </div>
 </div>
 @section('content')
+    {{-- {{ Session::get('url') }} --}}
+    {{-- {{ Session::put('url') }} --}}
     @if (Session::has('status'))
         <div class="alert alert-primary" role="alert">
             <h3> {{ Session::get('status') }}</h3>
@@ -15,39 +17,42 @@
         </div>
     @endif
     <!-- about -->
-    <div class="privacy about">
-        <h3>Chec<span>kout</span></h3>
+    {{-- <div class="privacy about"> --}}
 
-        <div class="checkout-right">
-            <h4>Your shopping cart contains: <span>
-                    {{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}
+    <div class="container my-3" style="padding:10px;text-align: center;">
+        <div class="row">
+            <h3><span>Checkout</span></h3>
 
-                    services
-                </span></h4>
-            <table class="timetable_sub">
-                <thead>
-                    <tr>
-                        <th>SL No.</th>
-                        <th>service</th>
-                        <th>Quantity</th>
-                        <th>service Name</th>
+            <div class="checkout-right">
+                <h4 style="padding:10px;">Your shopping cart contains: <span>
+                        {{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}
 
-                        <th>Price</th>
-                        <th>Remove</th>
-                    </tr>
-                </thead>
-                <tbody>
+                        <span>item(s)</span>
+                    </span></h4>
+                <table class="timetable_sub">
+                    <thead>
+                        <tr>
+                            <th>SL No.</th>
+                            <th>service</th>
+                            <th>Quantity</th>
+                            <th>service Name</th>
 
-                    @if (Session::has('cart'))
-                        @foreach ($services as $service)
-                            <tr class="rem1">
-                                <td class="invert">1</td>
-                                <td class="invert-image">
+                            <th>Price</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                                    <a href="#"><img src="/tema/{{ $service['service_image'] }}" alt=" "
-                                            class="img-responsive"></a>
-                                </td>
-                                {{-- <td class="invert">
+                        @if (Session::has('cart'))
+                            @foreach ($services as $service)
+                                <tr class="rem">
+                                    <td class="invert">1</td>
+                                    <td class="invert-image">
+
+                                        <a href="#"><img src="/tema/{{ $service['service_image'] }}" alt=" "
+                                                class="img-responsive" style="height: 50px; width: auto;"></a>
+                                    </td>
+                                    {{-- <td class="invert">
                                     <div class="quantity">
                                         <div class="quantity-select">
                                             <div class="entry value-minus">&nbsp;</div>
@@ -57,188 +62,193 @@
                                     </div>
                                 </td> --}}
 
-                                <form action="{{ url('/update_qty/' . $service['service_id']) }}" method="POST">
-                                    {{ csrf_field() }}
-                                    <td class="quantity">
-                                        <div class="input-group ">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <input type="number" name="quantity"
-                                                        class="quantity form-control input-number"
-                                                        value="{{ $service['qty'] }}" min="1" max="80">
-                                                </div>
+                                    <form action="{{ url('/update_qty/' . $service['service_id']) }}" method="POST">
+                                        @csrf
+                                        <td class="quantity">
+                                            <div class="input-group ">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <input type="number" name="quantity"
+                                                            class="quantity form-control input-number"
+                                                            value="{{ $service['qty'] }}" min="1" max="5">
+                                                    </div>
 
-                                                <div class="col-md-6">
+                                                    <div class="col-md-6">
 
-                                                    <input type="submit" class="btn btn-success" value="Aggiorna Qta"
-                                                        min="1" max="80">
+                                                        <input type="submit" class="btn btn-success" value="Update Qty"
+                                                            min="1" max="80">
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </td>
-                                </form>
-                                <td class="invert">{{ $service['service_name'] }}</td>
+                                        </td>
+                                    </form>
+                                    <td class="invert">{{ $service['service_name'] }}</td>
 
-                                <td class="invert">
-                                    @if ($service['service_discount'] > 0)
-                                        {{ $service['service_discount'] }}
-                                        </h4>
-                                    @else
+                                    <td class="invert">
                                         {{ $service['service_price'] }}
-                                    @endif
-
-                                </td>
-                                <td class="invert">
-                                    <div class="rem">
-                                        <a href="{{ url('/remove/' . $service['service_id']) }}">
-                                            <div class="close1"> </div>
-                                        </a>
-                                    </div>
-
-                                </td>
-                            </tr>
-                        @endforeach
-                    @endif
-
-                </tbody>
-            </table>
-        </div>
-        <div class="checkout-left">
-            <div class="col-md-4 checkout-left-basket">
-                <h4>Continue to basket</h4>
-                <ul>
-                    @if (Session::has('cart'))
-                        <table class="table text-center">
-                            <th class="text-center">Nome </th>
-                            <th>Quantità</th>
-
-                            <th>Valore Totale</th>
-                            @foreach ($services as $service)
-                                <tr>
-                                    <td>{{ $service['service_name'] }}</td>
-
-
-
-                                    <td>{{ $service['qty'] }}</td>
-
-                                    <?php
-                                    if ($service['service_discount'] > 0) {
-                                        $price = $service['service_discount'];
-                                    } else {
-                                        $price = $service['service_price'];
-                                    }
-                                    
-                                    ?>
-                                    <td class="total">{{ $service['qty'] * $price }}
-                                        <?php
-                                        $total = $service['qty'] * $price;
-                                        
-                                        ?>
+                                        {{-- @if ($service['service_discount'] > 0)
+                                            {{ $service['service_discount'] }}
+                                            
+                                        @else
+                                            {{ $service['service_price'] }}
+                                        @endif --}}
 
                                     </td>
+                                    <td class="invert">
+                                        <div class="rem">
+                                            <a href="{{ url('/remove/' . $service['service_id']) }}">
+                                                <div class="close1"> </div>
+                                            </a>
+                                        </div>
 
+                                    </td>
                                 </tr>
                             @endforeach
-                            {{-- <tr>
+                        @endif
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="checkout-left">
+                <div class="col-md-4 checkout-left-basket">
+                    <h4>Continue to basket</h4>
+                    <ul>
+                        @if (Session::has('cart'))
+                            <table class="table text-center">
+                                <th class="text-center">Nome </th>
+                                <th>Quantità</th>
+
+                                <th>Valore Totale</th>
+                                @foreach ($services as $service)
+                                    <tr>
+                                        <td>{{ $service['service_name'] }}</td>
+
+
+
+                                        <td>{{ $service['qty'] }}</td>
+
+                                        <?php
+                                        if ($service['service_discount'] > 0) {
+                                            $price = $service['service_discount'];
+                                        } else {
+                                            $price = $service['service_price'];
+                                        }
+                                        
+                                        ?>
+                                        <td class="total">{{ $service['qty'] * $price }}
+                                            <?php
+                                            $total = $service['qty'] * $price;
+                                            
+                                            ?>
+
+                                        </td>
+
+                                    </tr>
+                                @endforeach
+                                {{-- <tr>
 
                                 <span>{{ Session::has('cart') ? Session::get('cart')->totalPrice : null }}</span>
                             </tr> --}}
 
-                            <tr>
-                                <td>
-                                    <span class="total">Prezzo Totale </span>
-                                </td>
-                                <td></td>
-                                <td>
-                                    <span class="total">
-                                        {{ Session::get('cart')->totalPrice }}
-                                    </span>
-                                </td>
-                            </tr>
-                        </table>
-                    @endif
-                </ul>
-
-
-            </div>
-
-
-
-            <div class="col-md-8 address_form_agile">
-                @if (Session::has('Customer'))
-                    @php
-                        //Session::get('Customer');
-                        //print Session('Customer');
-                    @endphp
-                    <h4>Completa i tuoi dati</h4>
-                    <form action="/completaDati/{{ Session('Customer')->id }}" method="post"
-                        class="creditly-card-form agileinfo_form">
-                        @csrf
-                        <section class="creditly-wrapper wthree, w3_agileits_wrapper">
-                            <div class="information-wrapper">
-                                <div class="first-row form-group">
-                                    <div class="controls">
-                                        <label class="control-label">Nome </label>
-                                        <input class="billing-address-name form-control" type="text" name="nome"
-                                            placeholder="Nome" name="nome" value="{{ Session('Customer')->nome }}">
-                                    </div>
-                                    <div class="w3_agileits_card_number_grids">
-                                        <div class="w3_agileits_card_number_grid_left">
-                                            <div class="controls">
-                                                <label class="control-label">Cognome</label>
-                                                <input class="form-control" type="text" placeholder="Cognome"
-                                                    name="cognome" value="{{ Session('Customer')->cognome }}">
-                                            </div>
-                                        </div>
-                                        <div class="w3_agileits_card_number_grid_right">
-                                            <div class="controls">
-                                                <label class="control-label">Indirizzo</label>
-                                                <input class="form-control" type="text" placeholder="Indirizzo"
-                                                    name="indirizzo" value="{{ Session('Customer')->indirizzo }}">
-                                            </div>
-                                        </div>
-                                        <div class="clear"> </div>
-                                    </div>
-                                    <div class="controls">
-                                        <label class="control-label">Citta' </label>
-                                        <input class="form-control" type="text" placeholder="Citta' " name="citta"
-                                            value="{{ Session('Customer')->citta }}">
-                                    </div>
-                                    <div class="controls">
-                                        <label class="control-label">Nazione</label>
-                                        <input class="form-control" type="text" placeholder="nazione' " name="nazione"
-                                            value="{{ Session('Customer')->nazione }}">
-                                    </div>
-                                </div>
-                                <button class="submit check_out">Delivery to this Address</button>
-                            </div>
-                        </section>
-                    </form>
-                    @if (Session::has('Aggiorna'))
-                        @php
-                            // print Session('Order');
-                        @endphp
-                        @if (Session::has('cart'))
-                            <div class="checkout-right-basket">
-                                <a href="/ProcediOrdine">Vai al pagamento <span class="glyphicon glyphicon-chevron-right"
-                                        aria-hidden="true"></span></a>
-
-                            </div>
+                                <tr>
+                                    <td>
+                                        <span class="total">Prezzo Totale </span>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <span class="total">
+                                            {{ Session::get('cart')->totalPrice }}
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
                         @endif
+                    </ul>
+
+
+                </div>
+
+
+
+                <div class="col-md-8 address_form_agile">
+                    @if (Session::has('Customer'))
+                        @php
+                            //Session::get('Customer');
+                            //print Session('Customer');
+                        @endphp
+                        <h4>Completa i tuoi dati</h4>
+                        <form action="/completaDati/{{ Session('Customer')->id }}" method="post"
+                            class="creditly-card-form agileinfo_form">
+                            @csrf
+                            <section class="creditly-wrapper wthree, w3_agileits_wrapper">
+                                <div class="information-wrapper">
+                                    <div class="first-row form-group">
+                                        <div class="controls">
+                                            <label class="control-label">Nome </label>
+                                            <input class="billing-address-name form-control" type="text" name="nome"
+                                                placeholder="Nome" name="nome" value="{{ Session('Customer')->nome }}">
+                                        </div>
+                                        <div class="w3_agileits_card_number_grids">
+                                            <div class="w3_agileits_card_number_grid_left">
+                                                <div class="controls">
+                                                    <label class="control-label">Cognome</label>
+                                                    <input class="form-control" type="text" placeholder="Cognome"
+                                                        name="cognome" value="{{ Session('Customer')->cognome }}">
+                                                </div>
+                                            </div>
+                                            <div class="w3_agileits_card_number_grid_right">
+                                                <div class="controls">
+                                                    <label class="control-label">Indirizzo</label>
+                                                    <input class="form-control" type="text" placeholder="Indirizzo"
+                                                        name="indirizzo" value="{{ Session('Customer')->indirizzo }}">
+                                                </div>
+                                            </div>
+                                            <div class="clear"> </div>
+                                        </div>
+                                        <div class="controls">
+                                            <label class="control-label">Citta' </label>
+                                            <input class="form-control" type="text" placeholder="Citta' " name="citta"
+                                                value="{{ Session('Customer')->citta }}">
+                                        </div>
+                                        <div class="controls">
+                                            <label class="control-label">Nazione</label>
+                                            <input class="form-control" type="text" placeholder="nazione' "
+                                                name="nazione" value="{{ Session('Customer')->nazione }}">
+                                        </div>
+                                    </div>
+                                    <button class="submit check_out">Delivery to this Address</button>
+                                </div>
+                            </section>
+                        </form>
+
+                        @if (Session::has('Aggiorna'))
+                            @php
+                                // print Session('Order');
+                            @endphp
+                            @if (Session::has('cart'))
+                                <div class="checkout-right-basket">
+                                    <a href="/ProcediOrdine">Vai al pagamento <span
+                                            class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+
+                                </div>
+                            @endif
+                        @endif
+                    @else
+                        <div class="col-md-4"></div>
+
+                        <a href={{ '/areaUtenti' }} class="offset-md-4">
+                            <button class="btn btn-success">Per continuare aquisto esegui LogIn</button>
+
+
+                        </a>
                     @endif
-                @else
-                    <div class="col-md-4"></div>
+                </div>
 
-                    <a href="/login" class="offset-md-4">
-                        <button class="btn btn-success">Per continuare aquisto esegui LogIn</button>
-                    </a>
-                @endif
+                <div class="clearfix"> </div>
+
             </div>
-
-            <div class="clearfix"> </div>
 
         </div>
-
     </div>
     <!-- //about -->
     </div>

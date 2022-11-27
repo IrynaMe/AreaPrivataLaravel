@@ -15,6 +15,7 @@
         {{ Session::now('status', null) }}
     </div>
 @endif
+
 <br>
 <h1 style="color:rgb(62, 56, 76); text-align:center;" id="title1">Write your message here</h1>
 <br>

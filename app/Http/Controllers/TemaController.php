@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use App\Cart;
 use Session;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Support\Facades\Redirect;
+// use Illuminate\Support\Facades\URL;
 
 
 class TemaController extends Controller
@@ -99,7 +101,12 @@ class TemaController extends Controller
         'password' => 'required' ]);
 
         $Customer  = Customer::where('email', $request->input('email'))->first();
-       
+
+  
+
+    //$path=(Session('url'));
+    $path=$request->url_name;
+        
 
         if ($Customer) {
             $password=md5($request->input('password'));
@@ -111,13 +118,20 @@ class TemaController extends Controller
                 // echo 'passo da qui';
             $customerName=($Customer->nome);
             Session::put('customerName', $customerName);
-            return redirect('/contatti')->with('status', 'Utente loggato correttamente');
-                
+                if (!Session::has('url')) {
+                    // return redirect("$path");
+                    return redirect('/cart');
+
+                    //return view ("$path");
+                }
+                    else{
+                        return redirect('/contatti');
+                    } 
             } else {
-                return back()->with('status', 'Email o password non corretta');
+                return back()->with('status', 'Wrong email o password');
             }
         } else {
-            return back()->with('status', 'Non hai un account con questa email');
+            return back()->with('status', 'Account with this email does not exist');
         }
     }
 
@@ -130,12 +144,18 @@ class TemaController extends Controller
 
     }
 
-    //----------------------------------------CART
+    //----------------------------------------CART------
 
-public function cart()
+public function cart(Request $request)
     {
+        //$url=URL::full();
+        $url =$request->path();
+        Session::put('url', $url);
+
         if (!Session::has('cart')) {
             return view('front.cart');
+            // echo ($url);
+            
         }
 
         $oldCart = Session::has('cart')? Session::get('cart'):null;
@@ -156,6 +176,18 @@ public function addCart($id)
         //dd(Session::get('cart'));
         return back();
     }
+/* public function url (Request $request)
+    {
+        $path=$request->url_name;
+        
+        return redirect("$path");
+        //echo $path;
+        //
+        //return redirect()->route('front'.'url');
+        // return redirect ('front.{{$path}}');
+       
+
+    }  */
 
     public function update_qty(Request $request, $id)
         {
@@ -169,6 +201,66 @@ public function addCart($id)
             // dd(Session::get('cart'));
             return back();
         }
+    
+
+        public function remove($id)
+        {
+            $oldCart = Session::has('cart')? Session::get('cart'):null;
+            $cart = new Cart($oldCart);
+            $cart->removeItem($id);
+           
+            if (count($cart->items) > 0) {
+                Session::put('cart', $cart);
+            } else {
+                Session::forget('cart');
+            }
+    
+            //dd(Session::get('cart'));
+            return redirect('/cart');
+        }
+    
+    public function removeItem($id)
+        {
+            $this->totalQty -= $this->items[$id]['qty'];
+            $this->totalPrice -= $this->items[$id]['product_price'] * $this->items[$id]['qty'];
+            unset($this->items[$id]);
+        }
+        public function ProcediOrdine()
+        {
+            $oldCart = Session::has('cart')? Session::get('cart'):null;
+            $cart = new Cart($oldCart);
+            $order= new Order;
+            $order->Customer_id= (Session('Customer')->id);
+            $order->nome= (Session('Customer')->email);
+            $order->indirizzo= (Session('Aggiorna')->indirizzo);
+            $order->nome= (Session('Customer')->email);
+            $order->citta= (Session('Aggiorna')->citta);
+            $order->cart = serialize($cart);
+
+            $order->prezzo= (Session('cart')->totalPrice);
+            $order->stato = 1;
+            Session::put('Order', $order);
+            $order->save();
+            
+            return redirect('/pagamenti')->with('status', 'ordine aggiornato');
+        }
+
+        public function grazie()
+        {
+            if (Session::has('Order')) {
+                $id=(Session('Order')->id);
+                $order= Order::find($id);
+                $order->stato = 2;
+                $order->save();
+          
+                Session::forget('cart');
+                Session::forget('Aggiorna');
+/*                 Session::forget('Customer');
+                Session::flush(); */
+            }
+            return view('front.grazie');
+        }
+    
 
     public function mail(Request $request)
     {
@@ -182,6 +274,9 @@ $oggetto="contact request regading ".$request->oggetto;
 $mail_corpo="richiesta di contatto da ".$request->email." che scrive \r\n\n".$testo;
 $mail_headers="From: ".$nome_mittente."< ".$mail_mittente." > \r\n";
 $mail_headers .="X-mailer:PHP/".phpversion();
+
+
+//---------------------------------------MAIL------
 
 if(mail($mail_destinatario, $oggetto, $mail_corpo, $mail_headers)) {
     $mail=1;

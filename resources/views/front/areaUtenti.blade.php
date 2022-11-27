@@ -18,6 +18,16 @@
         </div>
     @endif
 
+    @if (Session::has('url'))
+        {{--         {{ Session::get('url') }} --}}
+        {{ Session::get('url') }}
+
+        <input type="hidden" value="/{{ Session('url') }}" name="url_name" id="url_name">
+
+        {{--  <input type="text" value="{{ Session('url') }}" name="url_name" id="url_name">
+        {{ Session::get('url') }} --}}
+        {{ Session::put('url'), null }}
+    @endif
     @if (Session::has('status'))
         <div class="alert alert-warning" role="alert">
             <h4> {{ Session::get('status') }}</h4>
@@ -153,7 +163,7 @@
         var checkBox = document.getElementById("checkbox-form-pp");
         // checkbox è checked?
         if (checkBox.checked !== true) {
-            alert("Errore: Devi accettare la privacy!");
+            alert("Error: You must accept the Privacy Policy!");
 
             return false;
         }

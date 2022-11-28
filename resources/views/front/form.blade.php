@@ -8,6 +8,11 @@
 
     </div>
 @endif
+@if (Session::has('Customer'))
+    <h4 id="Customer" style="display: none"> {{ Session::get('Customer') }}</h4>
+
+    </div>
+@endif
 
 @if (Session::has('status'))
     <div class="alert alert-success" role="alert">
@@ -191,11 +196,16 @@
 
 <script>
     function mustLogin() {
-        var alert_log = document.getElementById("mustLogin");
-        alert_log.style.display = "block";
-        // alert("Error: You must login before writting your message!");
+        var Customer = document.getElementById("Customer");
+        if (!Customer) {
+            var alert_log = document.getElementById("mustLogin");
+            alert_log.style.display = "block";
+            // alert("Error: You must login before writting your message!");
 
-        return false;
+            return false;
+        }
+
+
     }
 </script>
 {{-- <script>

@@ -39,6 +39,7 @@ Route::any('/logoutUser', [TemaController::class, 'logoutUser']);
 Route::any('/loginAmmre', [AdminController::class, 'loginAmmre']);
 Route::any('/dashboard', [AdminController::class, 'dashboard']);
 Route::any('/login', [AdminController::class, 'login']);
+Route::any('/mustLogin', [TemaController::class, 'mustLogin']);
 Route::any('/logout', [AdminController::class, 'logout']);
 
 

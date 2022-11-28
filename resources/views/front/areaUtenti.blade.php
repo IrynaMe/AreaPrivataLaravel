@@ -18,16 +18,11 @@
         </div>
     @endif
 
-    @if (Session::has('url'))
-        {{--         {{ Session::get('url') }} --}}
+    {{--     @if (Session::has('url'))
         {{ Session::get('url') }}
 
-        <input type="hidden" value="/{{ Session('url') }}" name="url_name" id="url_name">
-
-        {{--  <input type="text" value="{{ Session('url') }}" name="url_name" id="url_name">
-        {{ Session::get('url') }} --}}
-        {{ Session::put('url'), null }}
-    @endif
+        <input type="text" value="/{{ Session('url') }}" name="url_name" id="url_name">
+    @endif --}}
     @if (Session::has('status'))
         <div class="alert alert-warning" role="alert">
             <h4> {{ Session::get('status') }}</h4>

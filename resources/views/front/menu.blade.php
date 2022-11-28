@@ -40,6 +40,7 @@
                                 aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"
                                     aria-hidden="true"></i><span class="caret"></span></a>
                             <ul class="dropdown-menu"> --}}
+                        <li><a href={{ '/contatti' }}>Contatti</a></li>
                         @if (Session::has('Customer'))
                             <li><a href={{ '/logoutUser' }}>Logout</a></li>
                         @else

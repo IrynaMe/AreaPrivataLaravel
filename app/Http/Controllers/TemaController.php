@@ -35,11 +35,11 @@ class TemaController extends Controller
         }
     public function contatti()
         {
-            if (Session::has('Customer')){
+            //if (Session::has('Customer')){
                 return view('front.contatti');
-            } else {
+/*             } else {
                 return redirect('/areaUtenti')->with('status', 'You should login o register!');  
-            }
+            } */
             // return view('front.contatti');
         }
     
@@ -93,7 +93,7 @@ class TemaController extends Controller
             // }
 
 }
-       
+
    
     public function accesso(Request $request)
     {
@@ -105,7 +105,7 @@ class TemaController extends Controller
   
 
     //$path=(Session('url'));
-    $path=$request->url_name;
+    //$path=$request->url_name;
         
 
         if ($Customer) {
@@ -118,15 +118,16 @@ class TemaController extends Controller
                 // echo 'passo da qui';
             $customerName=($Customer->nome);
             Session::put('customerName', $customerName);
-                if (!Session::has('url')) {
+               if (Session::has('url')) {
                     // return redirect("$path");
                     return redirect('/cart');
+                    (Session::forget('url')); 
 
                     //return view ("$path");
                 }
-                    else{
+                    else { 
                         return redirect('/contatti');
-                    } 
+                     } 
             } else {
                 return back()->with('status', 'Wrong email o password');
             }
@@ -150,7 +151,7 @@ public function cart(Request $request)
     {
         //$url=URL::full();
         $url =$request->path();
-        Session::put('url', $url);
+       Session::put('url', $url);
 
         if (!Session::has('cart')) {
             return view('front.cart');

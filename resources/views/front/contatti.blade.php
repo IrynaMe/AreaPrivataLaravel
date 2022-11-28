@@ -26,5 +26,10 @@
             </a>
         </div>
     </div> --}}
+
+
     @include('front.form')
+
+
+    {{-- </div> --}}
 @endsection

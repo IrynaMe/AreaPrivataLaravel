@@ -1,7 +1,7 @@
-<h3 style="text-align:center">Nuovo Utente</h3>
+{{-- <h3 style="text-align:center">Nuovo Utente</h3> --}}
 <div class="col">
     <div class="col-8">
-        <h3 class="card-title text-center">Crea Utente </h3>
+        <h3 class="card-title text-center">Create a new user </h3>
         <div class="card-text">
             <!--
    <div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
@@ -9,7 +9,11 @@
                 @csrf
                 <!-- to error: add class "has-danger" -->
                 <div class="form-group">
-                    <label for="email_utente">Indirizzo Email</label>
+                    <label for="email_utente">Name</label>
+                    <input type="text" class="form-control form-control-sm" id="name_utente" name="name_utente">
+                </div>
+                <div class="form-group">
+                    <label for="email_utente">Email</label>
                     <input type="text" class="form-control form-control-sm" id="email_utente" name="email_utente">
                 </div>
                 <div class="form-group">
@@ -19,7 +23,7 @@
                     <br>
                 </div>
                 <div class="form-group">
-                    <label for="psw_utente">Conferma Password</label>
+                    <label for="psw_utente">Confirm password</label>
                     <input type="password" class="form-control form-control-sm" id="psw_utente_conferma"
                         name="psw_utente_conferma">
                 </div>
@@ -32,7 +36,7 @@
 
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary" name="CreaUtente">Invia</button>
+                    <button type="submit" class="btn btn-primary" name="CreaUtente">Submit</button>
                 </div>
             </form>
         </div>

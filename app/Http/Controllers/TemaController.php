@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use App\Cart;
 use Session;
 use Illuminate\Validation\Rules\Password;
+
 //use Illuminate\Support\Facades\Redirect;
 // use Illuminate\Support\Facades\URL;
 

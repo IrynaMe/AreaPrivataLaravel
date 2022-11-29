@@ -1,17 +1,17 @@
 @extends('ammne/layout')
 @section('content')
-    <div class="alert alert-primary" role="alert">
-
-        {{ Session::get('status') }}
-        {{ Session::put('status', null) }}
-
-    </div>
+    @if (Session::has('status'))
+        <div class="alert alert-warning" role="alert">
+            {{ Session::get('status') }}
+            {{ Session::put('status', null) }}
+        </div>
+    @endif
     <div class="container-fluid" style="margin-top:50px">
         <div class="row">
-            <div class="col-2">
+            <div class="col-3">
                 @include('ammne/dashboard')
             </div>
-            <div class="col-10">
+            <div class="col-9">
 
                 <br>
                 <table class="table table-responsive table-hover table-striped table-bordered ">
@@ -176,11 +176,16 @@
                             {{-- fine modale --}}
                             {{-- fine modal --}}
                         @endforeach
-                        <div class="d-flex justify-content-center">
-                            {{ $orders->links() }}
+                        <div class="d-sm-flex justify-content-center my-5">
+                            {{-- {{ $customers->links() }} --}}
+                            {{ $orders->links('pagination::bootstrap-4') }}
                         </div>
+
                     </tbody>
                 </table>
+                <div class="d-flex justify-content-center">
+                    {!! $orders->links('pagination::bootstrap-4') !!}
+                </div>
             </div>
         </div>
     </div>

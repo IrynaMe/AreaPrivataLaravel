@@ -2,21 +2,26 @@
 @section('content')
     <div class="container-fluid" style="margin-top:50px">
         <div class="row">
-            <div class="col-md-2">
-                @include('amministrazione/menu')
+            <div class="col-md-3">
+                @include('ammne/dashboard')
 
             </div>
-            <div class="col-md-10 " style="text-align: center">
-                <h3>Modifica email Utente</h3>
+            <div class="col-md-9 " style="text-align: center">
+                <h3>Modify User's name/email</h3>
                 <hr>
-                <form action="{{ url('/aggiornaCustomer') }}" method="post">
+                <form action="{{ '/aggiornaCustomer' }}" method="post">
                     @csrf
                     <p>
-                        <input type="text" value="{{ $customer->email }}" name="emailUpdate" id="email">
+                        <input type="text" value="{{ $customer->email }}" name="emailUpdate" id="emailUpdate">
+                        <input type="hidden" name="id" value="{{ $customer->id }}">
+                    </p>
+                    <p>
+                        <input type="text" value="{{ $customer->nome }}" name="nameUpdate" id="nameUpdate">
                         <input type="hidden" name="id" value="{{ $customer->id }}">
                     </p>
 
-                    <input type="submit" value="Invia  modifica" class="btn btn-success">
+
+                    <input type="submit" value="Submit changes" class="btn btn-success">
                 </form>
 
             </div>

@@ -47,7 +47,10 @@ https://daneden.github.io/animate.css/
     <link href="https://fonts.googleapis.com/css?family=Diplomata|Work+Sans:900&display=swap" rel="stylesheet">
 
     <!----style--->
-    <link rel="stylesheet" href="ammne/css/style.css">
+
+    {{--  <link rel="stylesheet" href={{ 'tema/css/bootstrap.css' }}> --}}
+    <link rel="stylesheet" href={{ 'tema/css/bootstrap.min.css' }}>
+    <link rel="stylesheet" href={{ 'ammne/css/style.css' }}>
     <!----font awesome--->
     <script src="https://kit.fontawesome.com/ab2cd30c6b.js" crossorigin="anonymous"></script>
 

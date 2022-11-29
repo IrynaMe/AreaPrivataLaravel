@@ -7,6 +7,7 @@ use App\Models\Amministratore;
 use App\Models\Customer;
 use Session;
 
+
 class AdminController extends Controller
 {
     public function login()
@@ -85,7 +86,7 @@ class AdminController extends Controller
         //In amministrazione.editCustomer ci sarà il campo di di input
 
         $customer = Customer::find($id);
-        return view('amministrazione.editCustomer')->with('customer', $customer);
+        return view('ammne.editCustomer')->with('customer', $customer);
     }
 
     public function aggiornaCustomer(Request $request)
@@ -98,7 +99,7 @@ class AdminController extends Controller
         //catturano il dato
         $customer = Customer::find($request->input('id'));
         $customer->email=$request->input('emailUpdate');
-
+        $customer->nome=$request->input('nameUpdate');
         //esegue update nel BD
         $customer->update();
 
@@ -118,6 +119,7 @@ class AdminController extends Controller
         $customer = new Customer();
         $customer->email=$request->email_utente;
         $customer->password = md5($request->psw_utente);
+        $customer->name=$request->name_utente;
         $customer->save();
 
         Session::put('success', 'Utente creato');

@@ -25,11 +25,12 @@
 
 
     <div class="container" style="margin-top:40px;text-align:center;">
-        <div class="col-md-3">
-            <h2>Admin dashboard</h2>
+        <div class="col-md-12">
+            <h4 style="text-align:left;">Admin panel</h4>
             <br>
             <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"
                 style="font-size:15px! important">
+
                 <a class="nav-link bck" id="v-pills-profile-tab" href="/" aria-selected="false" role="tab"
                     aria-controls="v-pills-messages">
                     Go back to website

@@ -236,7 +236,7 @@
                     @else
                         <div class="col-md-4"></div>
 
-                        <a href={{ '/areaUtenti' }} class="offset-md-4">
+                        <a href={{ '/loginUser' }} class="offset-md-4">
                             <button class="btn btn-success">Per continuare aquisto esegui LogIn</button>
 
 

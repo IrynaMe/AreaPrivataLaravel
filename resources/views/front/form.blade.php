@@ -21,7 +21,7 @@
     </div>
 @endif
 <div class="alert alert-danger" role="alert" name="mustLogin" id="mustLogin" style="display:none;">
-    <h4> You must <a style="text-decoration:underline;" href={{ '/areaUtenti' }}>login </a>before
+    <h4> You must <a style="text-decoration:underline;" href={{ '/loginUser' }}>login </a>before
         writing message</h4>
 </div>
 

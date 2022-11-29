@@ -29,16 +29,16 @@ class TemaController extends Controller
         {
             return view('front.about');
         }
-    public function areaUtenti()
+    public function loginUser()
         {
-            return view('front.areaUtenti');
+            return view('front.loginUser');
         }
     public function contatti()
         {
             //if (Session::has('Customer')){
                 return view('front.contatti');
 /*             } else {
-                return redirect('/areaUtenti')->with('status', 'You should login o register!');  
+                return redirect('/loginUser')->with('status', 'You should login o register!');  
             } */
             // return view('front.contatti');
         }

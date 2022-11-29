@@ -27,8 +27,8 @@ Route::get('/about', [TemaController::class, 'about']);
 
 //-------------------accesso---------
 
-//Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
-Route::get('/areaUtenti', [TemaController::class, 'areaUtenti']);
+//Route::get('/loginUser', [TemaController::class, 'loginUser']);
+Route::get('/loginUser', [TemaController::class, 'loginUser']);
 Route::get('/contatti', [TemaController::class, 'contatti']);
 Route::any('/accesso', [TemaController::class, 'accesso']);
 Route::any('/registrati', [TemaController::class, 'registrati']);

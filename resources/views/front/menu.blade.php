@@ -44,7 +44,7 @@
                         @if (Session::has('Customer'))
                             <li><a href={{ '/logoutUser' }}>Logout</a></li>
                         @else
-                            <li><a href={{ '/areaUtenti' }}>Login</a></li>
+                            <li><a href={{ '/loginUser' }}>Login</a></li>
                         @endif
                         {{--                             </ul>
                         </li> --}}

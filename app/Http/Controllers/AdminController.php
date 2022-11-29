@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Amministratore;
 use App\Models\Customer;
@@ -135,4 +135,21 @@ class AdminController extends Controller
         Session::put('success', 'Utente Cancellato');
         return redirect('/listaUtenti');
     }
+
+
+    public function ordini()
+    {
+        $orders = Order::paginate(3);
+        //trasformo info da seriale json ad un array, 
+        //su cui posso applicare foreach
+        //dove $key=unserialize($order->cart)
+        $orders->transform(function ($order, $key) {
+            $order->cart = unserialize($order->cart);
+
+            return $order;
+        });
+        return view('ammne.ordini')->with('orders', $orders);
+    }
+    
+
 }

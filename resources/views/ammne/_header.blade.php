@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin ecommerce </title>
+    <title>amministrazione ecommerce </title>
 
     <!--bootstrap css e js-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -54,17 +54,3 @@ https://daneden.github.io/animate.css/
 </head>
 
 <body>
-
-    @yield('content')
-
-</body>
-<!----mostra password---->
-<script src="ammne/js/contr_utente.js"></script>
-<script src="ammne/js/controllo_log.js"></script>
-<!--fine -->
-
-{{-- <!-- toggle dashboard -->
-<script src="ammne/js/toggle.js"></script> --}}
-
-
-</html>

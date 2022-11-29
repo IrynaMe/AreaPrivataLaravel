@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Service;
+use App\Models\Order;
 use Illuminate\Support\Facades\Validator;
 use App\Cart;
 use Session;
 use Illuminate\Validation\Rules\Password;
-use Illuminate\Support\Facades\Redirect;
+//use Illuminate\Support\Facades\Redirect;
 // use Illuminate\Support\Facades\URL;
 
 
@@ -226,7 +227,27 @@ public function addCart($id)
             $this->totalPrice -= $this->items[$id]['product_price'] * $this->items[$id]['qty'];
             unset($this->items[$id]);
         }
-        public function ProcediOrdine()
+    
+    //aggiorna utente
+    public function completaDati(Request $request, $id)
+    {
+        $aggiorna = Customer::where('id', $id)->first();
+        $aggiorna->nome = $request->input('nome');
+        $aggiorna->cognome = $request->input('cognome');
+        $aggiorna->indirizzo = $request->input('indirizzo');
+        $aggiorna->citta = $request->input('citta');
+        $aggiorna->nazione = $request->input('nazione');
+        
+      
+        $aggiorna->save();
+        //cosi aggiorno la sessione Customer con i dati modificati
+        Session::put('Customer', $aggiorna);
+              //cosi creo la sessione Aggiorna  con i dati inseriti
+        Session::put('Aggiorna', $aggiorna);
+        return redirect('/cart')->with('status', 'You have updtaed info');
+    }
+
+    public function ProcediOrdine()
         {
             $oldCart = Session::has('cart')? Session::get('cart'):null;
             $cart = new Cart($oldCart);

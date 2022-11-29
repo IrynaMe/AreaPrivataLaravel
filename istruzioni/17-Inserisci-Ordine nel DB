@@ -26,6 +26,8 @@ $table->timestamps();
 });
 }
 
+php artisan migrate
+
 adesso possimao andare e <a href="/ProcediOrdine"></a>
 Si va attraverso web.php
 Route::any('/ProcediOrdine', [TemaController::class, 'ProcediOrdine']);

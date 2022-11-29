@@ -64,6 +64,12 @@ Route::any('/addcart/{id}', [TemaController::class, 'addCart']);
 Route::post('/update_qty/{id}', [TemaController::class, 'update_qty']);
 Route::any('/remove/{id}', [TemaController::class, 'remove']);
 Route::any('/ProcediOrdine', [TemaController::class, 'ProcediOrdine']);
+//aggiorna utente
+Route::any('/completaDati/{id}', [TemaController::class, 'completaDati']);
+
+//---------------Order----
+Route::any('/ordini', [AdminController::class, 'ordini']);
+Route::any('/ProcediOrdine', [TemaController::class, 'ProcediOrdine']);
 
 //-------------------MAIL
 Route::any('/mail', [TemaController::class, 'mail']);

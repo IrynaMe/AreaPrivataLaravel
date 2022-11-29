@@ -29,16 +29,16 @@ class TemaController extends Controller
         {
             return view('front.about');
         }
-    public function areaUtenti()
+    public function loginUser()
         {
-            return view('front.areaUtenti');
+            return view('front.loginUser');
         }
     public function contatti()
         {
             //if (Session::has('Customer')){
                 return view('front.contatti');
 /*             } else {
-                return redirect('/areaUtenti')->with('status', 'You should login o register!');  
+                return redirect('/loginUser')->with('status', 'You should login o register!');  
             } */
             // return view('front.contatti');
         }
@@ -102,32 +102,20 @@ class TemaController extends Controller
 
         $Customer  = Customer::where('email', $request->input('email'))->first();
 
-  
-
-    //$path=(Session('url'));
-    //$path=$request->url_name;
-        
-
         if ($Customer) {
             $password=md5($request->input('password'));
-            //echo $password."<br>";
+         
             $passwordDB= ($Customer->password);
-            //echo $passwordDB;
+       
             if ($password == $passwordDB) {
             Session::put('Customer', $Customer);
-                // echo 'passo da qui';
+          
             $customerName=($Customer->nome);
             Session::put('customerName', $customerName);
-               if (Session::has('url')) {
-                    // return redirect("$path");
-                    return redirect('/cart');
-                    (Session::forget('url')); 
-
-                    //return view ("$path");
-                }
-                    else { 
-                        return redirect('/contatti');
-                     } 
+            Session::put('success', 'Welcome, '.$customerName.'! You entered your account successfully!');
+                  
+                return back()->with('success');
+                // return back()->with('status', 'Welcome, '.$customerName.'! You entered your account successfully!' );
             } else {
                 return back()->with('status', 'Wrong email o password');
             }

@@ -8,11 +8,11 @@
 
     </div>
 @endif
-@if (Session::has('Customer'))
+{{-- @if (Session::has('Customer'))
     <h4 id="Customer" style="display: none"> {{ Session::get('Customer') }}</h4>
 
     </div>
-@endif
+@endif --}}
 
 @if (Session::has('status'))
     <div class="alert alert-success" role="alert">
@@ -21,7 +21,7 @@
     </div>
 @endif
 <div class="alert alert-danger" role="alert" name="mustLogin" id="mustLogin" style="display:none;">
-    <h4> You must <a style="text-decoration:underline;" href={{ '/areaUtenti' }}>login </a>before
+    <h4> You must <a style="text-decoration:underline;" href={{ '/loginUser' }}>login </a>before
         writing message</h4>
 </div>
 

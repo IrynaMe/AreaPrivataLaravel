@@ -7,9 +7,9 @@
     <title>Admin ecommerce </title>
 
     <!--bootstrap css e js-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href={{ 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' }} rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    <script src={{ 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js' }}
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
     </script>
     <!--jquery slim (scegliere nel sito-->
@@ -18,19 +18,19 @@
     </script> -->
 
     <!--gestione del popper copiare il link da https://cdnjs.com/libraries-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    <script src={{ 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js' }}
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
     </script>
     <!--fine bootstrap -->
 
     <!--fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href={{ 'https://fonts.googleapis.com/css?family=Indie+Flower' }} rel="stylesheet">
 
     <!--ckeditor-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <script src={{ 'https://code.jquery.com/jquery-3.6.0.min.js' }}
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-    <script src="//cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+    <script src={{ '//cdn.ckeditor.com/4.14.1/standard/ckeditor.js' }}></script>
     {{-- <script type="text/javascript">
     $(document).ready(function () {
         $('.ckeditor').ckeditor();
@@ -42,17 +42,17 @@
     <!--sito di animate: github :https://github.com/daneden/animate.css
 https://daneden.github.io/animate.css/
 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href={{ 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css' }}>
     <!--font di Google usato per la scritta viaggi-->
-    <link href="https://fonts.googleapis.com/css?family=Diplomata|Work+Sans:900&display=swap" rel="stylesheet">
+    <link href={{ 'https://fonts.googleapis.com/css?family=Diplomata|Work+Sans:900&display=swap' }} rel="stylesheet">
 
     <!----style--->
 
     {{--  <link rel="stylesheet" href={{ 'tema/css/bootstrap.css' }}> --}}
     <link rel="stylesheet" href={{ 'tema/css/bootstrap.min.css' }}>
-    <link rel="stylesheet" href={{ 'ammne/css/style.css' }}>
+    <link rel="stylesheet" href={{ '../ammne/css/style.css' }}>
     <!----font awesome--->
-    <script src="https://kit.fontawesome.com/ab2cd30c6b.js" crossorigin="anonymous"></script>
+    <script src={{ 'https://kit.fontawesome.com/ab2cd30c6b.js' }} crossorigin="anonymous"></script>
 
 </head>
 

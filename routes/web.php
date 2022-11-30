@@ -66,6 +66,8 @@ Route::any('/remove/{id}', [TemaController::class, 'remove']);
 Route::any('/ProcediOrdine', [TemaController::class, 'ProcediOrdine']);
 //aggiorna utente
 Route::any('/completaDati/{id}', [TemaController::class, 'completaDati']);
+Route::get('/pagamenti', [TemaController::class, 'pagamenti']);
+Route::any('/grazie', [TemaController::class, 'grazie']);
 
 //---------------Order----
 Route::any('/ordini', [AdminController::class, 'ordini']);

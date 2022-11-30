@@ -4,7 +4,7 @@
     <body>
 
         <!--header-->
-        <div class="header" style="background:url(tema/images/banner2.jpg) no-repeat 0px 0px">
+        <div class="header" style="background:url(tema/images/banner_10.jpg) no-repeat 0px 0px">
             <div class="container">
                 <div class="header-top">
                     @include('front.menu')

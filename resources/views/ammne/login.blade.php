@@ -32,12 +32,13 @@
             <div class="card-body">
                 <h3 class="card-title text-center">
                     Login as Admin</h3>
+                <br>
 
                 <div class="card-text">
                     <form action="/loginAmmre" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="email_log">Indirizzo Email</label>
+                            <label for="email_log">Email</label>
                             <input type="email" class="form-control form-control-sm" id="email_log" name="email">
                         </div>
                         <div class="form-group">
@@ -48,9 +49,9 @@
                         <div class="form-check">
                             <input type="checkbox" class="form-check-input" onclick="showPassword()">
                             <label class="form-check-label" for="exampleCheck1">
-                                Mostra Password</label>
+                                Show Password</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Invia</button>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
 
                     </form>
                 </div>

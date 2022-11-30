@@ -268,6 +268,10 @@ public function addCart($id)
             return redirect('/pagamenti')->with('status', 'ordine aggiornato');
         }
 
+        public function pagamenti()
+        {
+            return view('front.pagamenti');
+        }
         public function grazie()
         {
             if (Session::has('Order')) {

@@ -17,16 +17,16 @@
                 <table class="table table-responsive table-hover table-striped table-bordered ">
                     <thead>
                         <tr class="text-center">
-                            <th scope="col">ID ordine</th>
-                            <th scope="col">Creato</th>
-                            <th scope="col">Tot Prezzo</th>
-                            <th scope="col">Stato</th>
-                            <th scope="col">Indirizzo Spedizione</th>
-                            <th scope="col">Citta</th>
-                            <th scope="col">Email Cliente</th>
-                            <th scope="col">Dettagli</th>
-                            <th scope="col">Modifica</th>
-                            <th scope="col">Cancella</th>
+                            <th scope="col">OrderID</th>
+                            <th scope="col">Created</th>
+                            <th scope="col">Total price</th>
+                            <th scope="col">State</th>
+                            <th scope="col">Delivery address</th>
+                            <th scope="col">City</th>
+                            <th scope="col">Customer's email </th>
+                            <th scope="col">Details</th>
+                            <th scope="col">Modify</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>

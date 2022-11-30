@@ -13,8 +13,8 @@
                         <tr class="text-center">
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
-                            <th scope="col">Modifica</th>
-                            <th scope="col">Cancella</th>
+                            <th scope="col">Modify</th>
+                            <th scope="col">Delete</th>
                         </tr>
                     </thead>
                     <tbody>

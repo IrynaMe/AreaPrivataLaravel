@@ -115,10 +115,10 @@
                     <ul>
                         @if (Session::has('cart'))
                             <table class="table text-center">
-                                <th class="text-center">Nome </th>
-                                <th>Quantità</th>
+                                <th class="text-center">Name </th>
+                                <th>Quantity</th>
 
-                                <th>Valore Totale</th>
+                                <th>Price</th>
                                 @foreach ($services as $service)
                                     <tr>
                                         <td>{{ $service['service_name'] }}</td>
@@ -146,21 +146,29 @@
                                     </tr>
                                 @endforeach
                                 {{-- <tr>
-
-                                <span>{{ Session::has('cart') ? Session::get('cart')->totalPrice : null }}</span>
-                            </tr> --}}
-
-                                <tr>
+    
+                                    <span>{{ Session::has('cart') ? Session::get('cart')->totalPrice : null }}</span>
+                                </tr> --}}
+                                <tr style="border:1px solid grey;">
                                     <td>
-                                        <span class="total">Prezzo Totale </span>
+                                        <span class="total">Total value </span>
                                     </td>
-                                    <td></td>
+
                                     <td>
                                         <span class="total">
+                                            {{ Session::get('cart')->totalQty }}
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="total" style="color: red;">
                                             {{ Session::get('cart')->totalPrice }}
                                         </span>
                                     </td>
+
+
                                 </tr>
+
+
                             </table>
                         @endif
                     </ul>
@@ -176,7 +184,7 @@
                             //Session::get('Customer');
                             //print Session('Customer');
                         @endphp
-                        <h4>Completa i tuoi dati</h4>
+                        <h4>Fill in your details</h4>
                         <form action="/completaDati/{{ Session('Customer')->id }}" method="post"
                             class="creditly-card-form agileinfo_form">
                             @csrf
@@ -184,21 +192,21 @@
                                 <div class="information-wrapper">
                                     <div class="first-row form-group">
                                         <div class="controls">
-                                            <label class="control-label">Nome </label>
+                                            <label class="control-label">First name </label>
                                             <input class="billing-address-name form-control" type="text" name="nome"
                                                 placeholder="Nome" name="nome" value="{{ Session('Customer')->nome }}">
                                         </div>
                                         <div class="w3_agileits_card_number_grids">
                                             <div class="w3_agileits_card_number_grid_left">
                                                 <div class="controls">
-                                                    <label class="control-label">Cognome</label>
+                                                    <label class="control-label">Last name</label>
                                                     <input class="form-control" type="text" placeholder="Cognome"
                                                         name="cognome" value="{{ Session('Customer')->cognome }}">
                                                 </div>
                                             </div>
                                             <div class="w3_agileits_card_number_grid_right">
                                                 <div class="controls">
-                                                    <label class="control-label">Indirizzo</label>
+                                                    <label class="control-label">Address</label>
                                                     <input class="form-control" type="text" placeholder="Indirizzo"
                                                         name="indirizzo" value="{{ Session('Customer')->indirizzo }}">
                                                 </div>
@@ -206,12 +214,12 @@
                                             <div class="clear"> </div>
                                         </div>
                                         <div class="controls">
-                                            <label class="control-label">Citta' </label>
+                                            <label class="control-label">City </label>
                                             <input class="form-control" type="text" placeholder="Citta' " name="citta"
                                                 value="{{ Session('Customer')->citta }}">
                                         </div>
                                         <div class="controls">
-                                            <label class="control-label">Nazione</label>
+                                            <label class="control-label">Nationality</label>
                                             <input class="form-control" type="text" placeholder="nazione' "
                                                 name="nazione" value="{{ Session('Customer')->nazione }}">
                                         </div>
@@ -227,8 +235,8 @@
                             @endphp
                             @if (Session::has('cart'))
                                 <div class="checkout-right-basket">
-                                    <a href="/ProcediOrdine">Vai al pagamento <span
-                                            class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                                    <a href="/ProcediOrdine">Go to payment <span class="glyphicon glyphicon-chevron-right"
+                                            aria-hidden="true"></span></a>
 
                                 </div>
                             @endif
@@ -237,7 +245,7 @@
                         <div class="col-md-4"></div>
 
                         <a href={{ '/loginUser' }} class="offset-md-4">
-                            <button class="btn btn-success">Per continuare aquisto esegui LogIn</button>
+                            <button class="btn btn-success">You must login to continue</button>
 
 
                         </a>

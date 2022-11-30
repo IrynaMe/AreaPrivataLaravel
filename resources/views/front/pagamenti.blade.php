@@ -1,53 +1,105 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>GoTravel</title>
-    <!-- for-mobile-apps -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords"
-        content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-    <script type="application/x-javascript">
-            addEventListener("load", function() {
-                setTimeout(hideURLbar, 0);
-            }, false);
-    
-            function hideURLbar() {
-                window.scrollTo(0, 1);
-            }
-        </script>
-    <!-- //for-mobile-apps -->
-    <link href="{{ 'tema/payments_styles/css/bootstrap.css' }}" rel="stylesheet" type="text/css" media="all" />
-    <link href=" {{ 'tema/payments_styles/css/style.css' }}" rel=" stylesheet" type="text/css" media="all" />
-    <!-- font-awesome icons -->
-    <link href="{{ 'tema/payments_styles/css/font-awesome.css' }}" rel="stylesheet" type="text/css" media="all" />
-    <!-- //font-awesome icons -->
-
-    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic'
-        rel='stylesheet' type='text/css'>
-    <link
-        href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
-        rel='stylesheet' type='text/css'>
-
-</head>
-
-<body>
+@extends('front/paym_layout')
+<div class="header banr">
+    <div class="container">
+        <div class="header-top">
 
 
-    <div class="w3l_banner_nav_right">
+
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div class="navbar-brand">
+                                <h1><a href="index.html"><span>Go</span> Travel</a></h1>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="row">
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"
+                            style="border: 1px solid transparent; !important">
+
+                            <div class="col-9">
+                                <ul class="nav navbar-nav navbar-left"
+                                    style="border: 1px solid transparent; !important">
+                                    <li class="active" style="border: 1px solid transparent; !important"><a
+                                            style="border: 1px solid transparent; !important"
+                                            href={{ '/' }}>Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li><a style="border: 1px solid transparent; !important"
+                                            href={{ '/about' }}>About</a></li>
+                                    <li><a style="border: 1px solid transparent; !important"
+                                            href={{ '/services' }}>Services</a></li>
+                                    <li><a style="border: 1px solid transparent; !important"
+                                            href={{ '/cart' }}>Cart <span
+                                                style="margin: 15px 0 0 -5px; padding:5px 10px;background-color:orange; color:white; 
+                                    border-radius:50%">
+                                                {{ Session::has('cart') ? Session::get('cart')->totalQty : 0 }}</span></a>
+                                    </li>
+
+                                    {{--                         <li class="dropdown profile_details_drop">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                            aria-haspopup="true" aria-expanded="false">Account <i class="fa fa-user"
+                                                aria-hidden="true"></i><span class="caret"></span></a>
+                                        <ul class="dropdown-menu"> --}}
+                                    <li><a style="border: 1px solid transparent; !important"
+                                            href={{ '/contatti' }}>Contatti</a></li>
+                                    @if (Session::has('Customer'))
+                                        <li><a style="border: 1px solid transparent; !important"
+                                                href={{ '/logoutUser' }}>Logout</a></li>
+                                    @else
+                                        <li><a style="border: 1px solid transparent; !important"
+                                                href={{ '/loginUser' }}>Login</a></li>
+                                    @endif
+                                    {{--                             </ul>
+                                    </li> --}}
+
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="nav navbar-nav navbar-right"
+                                    style="border: 1px solid transparent; !important">
+                                    <li><a style="border: 1px solid transparent; !important"
+                                            href={{ '/login' }}>Admin </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div><!-- /.navbar-collapse -->
+                    </div>
+                </div><!-- /.container-fluid -->
+            </nav>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+@section('content')
+    <div class="w3l_banner_nav_right" style="width:100%; margin:0 auto; text-align:center; !important">
         <!-- payment -->
-        <div class="privacy about">
-            <h3>Pay<span>ment</span></h3>
+        <div class="privacy" style="width:100%; margin:0 auto; text-align:center; !important">
+            <h3 style="margin-bottom:30px; !important">Pay<span>ment</span></h3>
 
-            <div class="checkout-right">
+            <div class="checkout-right" style="width:100%; margin:0 auto; text-align:center; !important">
                 <!--Horizontal Tab-->
                 <div id="parentHorizontalTab" style="display: block; width: 100%; margin: 0px;">
                     <ul class="resp-tabs-list hor_1">
@@ -65,8 +117,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="resp-tabs-container hor_1" style="border-color: rgb(193, 193, 193);">
 
                         <h2 class="resp-accordion hor_1 resp-tab-active" role="tab" aria-controls="hor_1_tab_item-0"
-                            style="background: none; border-color: rgb(193, 193, 193);"><span
-                                class="resp-arrow"></span>Cash
+                            style="background: none; border-color: rgb(193, 193, 193);"><span class="resp-arrow"></span>Cash
                             on delivery (COD)</h2>
                         <div class="resp-tab-content hor_1 resp-tab-content-active" aria-labelledby="hor_1_tab_item-0"
                             style="display:block">
@@ -232,7 +283,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                     </div>
                                     <div class="col-md-6">
-                                        <h3>Concludi Ordine</h3>
+                                        <h3>Complete order</h3>
 
                                     </div>
                                 </div>
@@ -370,9 +421,5 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             });
 
         });
-
-        <
-        /body>
-
-        <
-        /html>
+    </script>
+@endsection

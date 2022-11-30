@@ -10,7 +10,7 @@
     {{-- {{ Session::get('url') }} --}}
     {{-- {{ Session::put('url') }} --}}
     @if (Session::has('status'))
-        <div class="alert alert-primary" role="alert">
+        <div class="alert alert-success" role="alert">
             <h3> {{ Session::get('status') }}</h3>
 
             {{ Session::put('status', null) }}

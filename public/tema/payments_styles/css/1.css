@@ -1,0 +1,1102 @@
+/* ---------------styles for header------------ */
+
+
+
+
+
+/*--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+
+.navbar-collapse {
+    max-height: 340px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.navbar-default {
+    background: none !important;
+    border: none !important;
+}
+
+.navbar>.container .navbar-brand,
+.navbar>.container-fluid .navbar-brand {
+    margin-left: 0px;
+}
+
+.banr {
+    min-height: 200px !important;
+    padding-bottom: 0em;
+}
+
+.header {
+    background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    min-height: 733px;
+}
+
+
+
+
+
+.banr {
+    min-height: 200px !important;
+    padding-bottom: 0em;
+    background: url(../../images/banner_10.jpg) no-repeat 0px 0px;
+    background-size: cover;
+}
+
+.navbar-nav {
+    float: right;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+@media(max-width:1080px) {
+
+
+    .banr {
+        min-height: 128px !important;
+    }
+}
+
+@media(max-width:991px) {
+
+
+    .banr {
+        min-height: 100px !important;
+    }
+}
+
+@media(max-width:640px) {
+    .banr {
+        min-height: 80px !important;
+    }
+}
+
+@media(max-width:480px) {
+    .banr {
+        min-height: 56px !important;
+    }
+}
+
+@media(max-width:384px) {
+    .navbar-default {
+        padding: 1em 0;
+    }
+
+    .header {
+        background: url(../images/banner_10.jpg) no-repeat -120px 0px;
+        background-size: cover;
+        min-height: 250px;
+        padding-bottom: 1em;
+    }
+
+    .header {
+        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 733px;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .sr-only-focusable:active,
+    .sr-only-focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+
+    .navbar-brand {
+        float: left;
+        margin-left: 0.8em;
+    }
+
+    .navbar {
+        border-radius: 0px;
+    }
+
+    .navbar-nav {
+        float: right;
+        margin: 0;
+    }
+
+    .navbar-default {
+        background: none !important;
+        border: none !important;
+    }
+
+    .top-menu ul li {
+        display: inline-block;
+        margin: 0.8em 1em;
+    }
+
+    .navbar-brand h1 a {
+        color: #fff;
+        font-size: 1.7em;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: .5em;
+        font-weight: 700;
+    }
+
+    .navbar-default .navbar-nav>li>a {
+        color: #fff;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 1.4em;
+    }
+
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>li>a:focus {
+        color: #fff;
+        background-color: #eb5424;
+    }
+
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:hover,
+    .navbar-default .navbar-nav>.active>a:focus {
+        color: #fff;
+        background-color: #eb5424;
+    }
+
+    .dropdown-menu>li>a:hover,
+    .dropdown-menu>li>a:focus {
+        color: #fff;
+        text-decoration: none;
+        background-color: #eb5424;
+    }
+
+    .navbar {
+        position: relative;
+        min-height: 50px;
+        margin-bottom: 0;
+        border: 1px solid transparent;
+    }
+
+    .navbar-brand {
+        float: left;
+        height: 0px;
+        padding: 10px 0px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:hover,
+    .navbar-default .navbar-nav>.open>a:focus {
+        color: #fff;
+        background-color: #eb5424;
+    }
+
+
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+
+    .navbar-default {
+        padding: 1.2em 0;
+    }
+
+    .navbar-collapse {
+        max-height: 340px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .navbar-nav>li {
+        float: left;
+        margin-right: 5px;
+    }
+
+    .navbar-brand span {
+        color: #eb5424;
+    }
+
+    .navbar-brand h1 a:hover {
+        text-decoration: none;
+    }
+
+    .header {
+        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        min-height: 733px;
+    }
+
+    .banr {
+        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+        background-size: cover;
+        padding: 0;
+        min-height: 120px !important;
+    }
+
+
+
+
+
+
+
+
+
+    @media (max-width:640px) {
+
+
+        @media (max-width:480px) {
+
+            @media (max-width: 320px) {
+
+                /**responsive**/
+                @media(max-width:1440px) {
+                    .header {
+                        min-height: 697px;
+                    }
+
+                    .caption {
+                        margin-top: 16em;
+                    }
+                }
+
+                @media(max-width:1366px) {
+                    .header {
+                        min-height: 600px;
+                    }
+
+                    .caption {
+                        margin-top: 14em;
+                    }
+                }
+
+                @media(max-width:1280px) {
+                    .caption {
+                        margin-top: 12em;
+                    }
+
+                    .header {
+                        min-height: 563px;
+                    }
+                }
+
+                @media(max-width:1080px) {
+                    .caption {
+                        margin-top: 11em;
+                    }
+
+                    .caption h3 {
+                        font-size: 3em;
+                    }
+
+
+                    .header {
+                        min-height: 474px;
+                    }
+
+
+
+                }
+
+                @media(max-width:991px) {
+                    .navbar-brand h1 a {
+                        font-size: 1.3em;
+                    }
+
+                    .navbar-default .navbar-nav>li>a {
+                        font-size: 1.2em;
+                    }
+
+
+                    .caption h3 {
+                        font-size: 2.7em;
+                    }
+
+                    .header {
+                        min-height: 334px;
+                    }
+
+                    .caption {
+                        margin-top: 4em;
+                    }
+
+                    .caption {
+                        margin-top: 4em;
+                    }
+
+
+
+
+
+                }
+
+                @media(max-width:767px) {
+                    .navbar-nav>li {
+                        float: none;
+                        margin-right: 0px;
+                    }
+
+                    .navbar-nav {
+                        float: none;
+                        margin: 0;
+                        text-align: center;
+                        background: rgba(0, 0, 0, 0.85);
+                    }
+                }
+
+                @media(max-width:640px) {
+                    .navbar-nav {
+                        float: none;
+                        margin: 0;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .navbar-collapse {
+                        margin-top: 1em;
+                    }
+
+                    .navbar-default .navbar-collapse,
+                    .navbar-default .navbar-form {
+                        border-color: #222222;
+                    }
+
+                    .navbar-toggle {
+                        margin: 0px;
+                    }
+
+                    .navbar-default .navbar-toggle:hover,
+                    .navbar-default .navbar-toggle:focus {
+                        background-color: #0099e5;
+                    }
+
+                    .navbar-default .navbar-toggle {
+                        border-color: #0099e5;
+                    }
+
+                    .navbar-default .navbar-toggle .icon-bar {
+                        background-color: #fff;
+                    }
+
+                    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+                    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+                        color: #fff;
+                        background-color: transparent;
+                    }
+
+                    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+                        color: #fff;
+                        background-color: #222222;
+                    }
+
+                    .navbar-toggle {
+                        background-color: #0099e5;
+                    }
+
+                    .navbar-brand {
+                        padding: 0px 0px;
+                    }
+
+                    .navbar-brand h1 a {
+                        font-size: 1.2em;
+                    }
+
+                    .header {
+                        min-height: 290px;
+                    }
+
+                    .caption {
+                        margin: 4em 2em;
+                    }
+
+                    .header-top {
+                        margin-top: 0em;
+                    }
+
+                    .header-top {
+                        margin-top: 0em;
+                    }
+
+                    .caption h3 {
+                        font-size: 2.5em;
+                        margin-bottom: 1em;
+                    }
+
+
+
+
+
+
+                    .navbar-nav .open .dropdown-menu {
+                        position: static;
+                        float: none;
+                        width: auto;
+                        margin-top: 0;
+                        background-color: transparent;
+                        border: 0;
+                        -webkit-box-shadow: none;
+                        box-shadow: none;
+                        text-align: center;
+                    }
+
+
+                }
+
+
+
+
+                @media(max-width:480px) {
+                    .navbar-brand h1 a {
+                        font-size: 1em;
+                    }
+
+                    .header {
+                        min-height: 254px;
+                    }
+
+
+
+
+                    .header-bottom {
+                        position: inherit;
+                    }
+
+                    .header-grids {
+                        position: inherit;
+                    }
+
+
+                    .caption {
+                        margin-top: 5em;
+                    }
+
+                    .caption h3 {
+                        font-size: 1.6em;
+                        margin: 0;
+                        letter-spacing: 1px;
+                    }
+
+
+
+
+
+
+
+                }
+
+
+
+                @media(max-width:384px) {
+                    .navbar-default {
+                        padding: 1em 0;
+                    }
+
+                    .header {
+                        background: url(../images/banner_10.jpg) no-repeat -120px 0px;
+                        background-size: cover;
+                        min-height: 250px;
+                        padding-bottom: 1em;
+                    }
+
+                    .caption {
+                        margin-top: 3em;
+                    }
+
+                    .navbar-toggle {
+                        margin-top: 6px;
+                    }
+
+                    .navbar-toggle {
+                        padding: 6px 7px
+                    }
+
+
+
+
+                    .banr {
+                        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+                        background-size: cover;
+                        padding: 0;
+                        min-height: 120px !important;
+                    }
+
+
+                }
+
+                @media(max-width:375px) {
+                    .course-info {
+                        padding: 1.55em;
+                        left: 0;
+                        width: 79%;
+                    }
+                }
+
+                @media(max-width:320px) {
+                    .navbar-default {
+                        padding: 1em 0;
+                    }
+
+                    .header {
+                        background: url(../images/banner_10.jpg) no-repeat -120px 0px;
+                        background-size: cover;
+                        min-height: 200px;
+                        padding-bottom: 1em;
+                    }
+
+                    .caption {
+                        margin-top: 3em;
+                    }
+
+                    .navbar-toggle {
+                        margin-top: 6px;
+                    }
+
+                    .navbar-toggle {
+                        padding: 6px 7px
+                    }
+
+
+
+
+                    .banr {
+                        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+                        background-size: cover;
+                        padding: 0;
+                        min-height: 70px !important;
+                    }
+
+
+
+                    /* ----------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+                    .navbar-brand {
+                        float: left;
+                        margin-left: 0.8em;
+                    }
+
+                    .navbar {
+                        border-radius: 0px;
+                    }
+
+                    .navbar-nav {
+                        float: right;
+                        margin: 0;
+                    }
+
+                    .navbar-default {
+                        background: none !important;
+                        border: none !important;
+                    }
+
+                    .top-menu ul li {
+                        display: inline-block;
+                        margin: 0.8em 1em;
+                    }
+
+                    .navbar-brand h1 a {
+                        color: #fff;
+                        font-size: 1.7em;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        text-transform: uppercase;
+                        letter-spacing: 4px;
+                        line-height: .5em;
+                        font-weight: 700;
+                    }
+
+                    .navbar-default .navbar-nav>li>a {
+                        color: #fff;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        font-size: 1.4em;
+                    }
+
+                    .navbar-default .navbar-nav>li>a:hover,
+                    .navbar-default .navbar-nav>li>a:focus {
+                        color: #fff;
+                        background-color: #eb5424;
+                    }
+
+                    .navbar-default .navbar-nav>.active>a,
+                    .navbar-default .navbar-nav>.active>a:hover,
+                    .navbar-default .navbar-nav>.active>a:focus {
+                        color: #fff;
+                        background-color: #eb5424;
+                    }
+
+                    .dropdown-menu>li>a:hover,
+                    .dropdown-menu>li>a:focus {
+                        color: #fff;
+                        text-decoration: none;
+                        background-color: #eb5424;
+                    }
+
+                    .navbar {
+                        position: relative;
+                        min-height: 50px;
+                        margin-bottom: 0;
+                        border: 1px solid transparent;
+                    }
+
+                    .navbar-brand {
+                        float: left;
+                        height: 0px;
+                        padding: 10px 0px;
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+
+                    .navbar-default .navbar-nav>.open>a,
+                    .navbar-default .navbar-nav>.open>a:hover,
+                    .navbar-default .navbar-nav>.open>a:focus {
+                        color: #fff;
+                        background-color: #eb5424;
+                    }
+
+                    .dropdown-menu>li>a {
+                        display: block;
+                        padding: 10px 20px;
+                        color: #000;
+                        font-family: 'Yanone Kaffeesatz', sans-serif;
+                        font-size: 1.2em;
+                    }
+
+                    .navbar>.container .navbar-brand,
+                    .navbar>.container-fluid .navbar-brand {
+                        margin-left: 0px;
+                    }
+
+                    .navbar-nav>li>a {
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+
+
+
+                    .navbar-default {
+                        padding: 1.2em 0;
+                    }
+
+                    .navbar-collapse {
+                        max-height: 340px;
+                        padding-right: 0px;
+                        padding-left: 0px;
+                    }
+
+                    .navbar-nav>li {
+                        float: left;
+                        margin-right: 5px;
+                    }
+
+                    .navbar-brand span {
+                        color: #eb5424;
+                    }
+
+                    .navbar-brand h1 a:hover {
+                        text-decoration: none;
+                    }
+
+                    .header {
+                        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+                        background-size: cover;
+                        -webkit-background-size: cover;
+                        -moz-background-size: cover;
+                        -o-background-size: cover;
+                        -ms-background-size: cover;
+                        min-height: 733px;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    @media (max-width:640px) {
+
+
+                        @media (max-width:480px) {
+
+                            @media (max-width: 320px) {
+
+                                /**responsive**/
+                                @media(max-width:1440px) {
+                                    .header {
+                                        min-height: 697px;
+                                    }
+
+                                    .caption {
+                                        margin-top: 16em;
+                                    }
+                                }
+
+                                @media(max-width:1366px) {
+                                    .header {
+                                        min-height: 600px;
+                                    }
+
+                                    .caption {
+                                        margin-top: 14em;
+                                    }
+                                }
+
+                                @media(max-width:1280px) {
+                                    .caption {
+                                        margin-top: 12em;
+                                    }
+
+                                    .header {
+                                        min-height: 563px;
+                                    }
+                                }
+
+                                @media(max-width:1080px) {
+                                    .caption {
+                                        margin-top: 11em;
+                                    }
+
+                                    .caption h3 {
+                                        font-size: 3em;
+                                    }
+
+
+                                    .header {
+                                        min-height: 474px;
+                                    }
+
+
+
+                                }
+
+                                @media(max-width:991px) {
+                                    .navbar-brand h1 a {
+                                        font-size: 1.3em;
+                                    }
+
+                                    .navbar-default .navbar-nav>li>a {
+                                        font-size: 1.2em;
+                                    }
+
+                                    .caption h3 {
+                                        font-size: 2.7em;
+                                    }
+
+                                    .header {
+                                        min-height: 334px;
+                                    }
+
+                                    .caption {
+                                        margin-top: 4em;
+                                    }
+
+                                    .caption {
+                                        margin-top: 4em;
+                                    }
+
+
+
+
+
+                                }
+
+                                @media(max-width:767px) {
+                                    .navbar-nav>li {
+                                        float: none;
+                                        margin-right: 0px;
+                                    }
+
+                                    .navbar-nav {
+                                        float: none;
+                                        margin: 0;
+                                        text-align: center;
+                                        background: rgba(0, 0, 0, 0.85);
+                                    }
+                                }
+
+                                @media(max-width:640px) {
+                                    .navbar-nav {
+                                        float: none;
+                                        margin: 0;
+                                        width: 100%;
+                                        text-align: center;
+                                    }
+
+                                    .navbar-collapse {
+                                        margin-top: 1em;
+                                    }
+
+                                    .navbar-default .navbar-collapse,
+                                    .navbar-default .navbar-form {
+                                        border-color: #222222;
+                                    }
+
+                                    .navbar-toggle {
+                                        margin: 0px;
+                                    }
+
+                                    .navbar-default .navbar-toggle:hover,
+                                    .navbar-default .navbar-toggle:focus {
+                                        background-color: #0099e5;
+                                    }
+
+                                    .navbar-default .navbar-toggle {
+                                        border-color: #0099e5;
+                                    }
+
+                                    .navbar-default .navbar-toggle .icon-bar {
+                                        background-color: #fff;
+                                    }
+
+                                    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+                                    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+                                        color: #fff;
+                                        background-color: transparent;
+                                    }
+
+                                    .navbar-default .navbar-nav .open .dropdown-menu>li>a {
+                                        color: #fff;
+                                        background-color: #222222;
+                                    }
+
+                                    .navbar-toggle {
+                                        background-color: #0099e5;
+                                    }
+
+                                    .navbar-brand {
+                                        padding: 0px 0px;
+                                    }
+
+                                    .navbar-brand h1 a {
+                                        font-size: 1.2em;
+                                    }
+
+                                    .header {
+                                        min-height: 290px;
+                                    }
+
+                                    .caption {
+                                        margin: 4em 2em;
+                                    }
+
+                                    .header-top {
+                                        margin-top: 0em;
+                                    }
+
+                                    .header-top {
+                                        margin-top: 0em;
+                                    }
+
+                                    .caption h3 {
+                                        font-size: 2.5em;
+                                        margin-bottom: 1em;
+                                    }
+
+
+
+
+
+
+                                    .navbar-nav .open .dropdown-menu {
+                                        position: static;
+                                        float: none;
+                                        width: auto;
+                                        margin-top: 0;
+                                        background-color: transparent;
+                                        border: 0;
+                                        -webkit-box-shadow: none;
+                                        box-shadow: none;
+                                        text-align: center;
+                                    }
+
+
+                                }
+
+
+
+
+                                @media(max-width:480px) {
+                                    .navbar-brand h1 a {
+                                        font-size: 1em;
+                                    }
+
+                                    .header {
+                                        min-height: 254px;
+                                    }
+
+
+
+
+                                    .caption {
+                                        margin-top: 5em;
+                                    }
+
+                                    .caption h3 {
+                                        font-size: 1.6em;
+                                        margin: 0;
+                                        letter-spacing: 1px;
+                                    }
+
+
+
+
+
+
+
+                                }
+
+
+
+                                @media(max-width:384px) {
+                                    .navbar-default {
+                                        padding: 1em 0;
+                                    }
+
+                                    .header {
+                                        background: url(../images/banner_10.jpg) no-repeat -120px 0px;
+                                        background-size: cover;
+                                        min-height: 250px;
+                                        padding-bottom: 1em;
+                                    }
+
+                                    .caption {
+                                        margin-top: 3em;
+                                    }
+
+                                    .navbar-toggle {
+                                        margin-top: 6px;
+                                    }
+
+                                    .navbar-toggle {
+                                        padding: 6px 7px
+                                    }
+
+
+
+
+                                    .banr {
+                                        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+                                        background-size: cover;
+                                        padding: 0;
+                                        min-height: 120px !important;
+                                    }
+
+
+                                }
+
+                                @media(max-width:375px) {
+                                    .course-info {
+                                        padding: 1.55em;
+                                        left: 0;
+                                        width: 79%;
+                                    }
+                                }
+
+                                @media(max-width:320px) {
+                                    .navbar-default {
+                                        padding: 1em 0;
+                                    }
+
+                                    .header {
+                                        background: url(../images/banner_10.jpg) no-repeat -120px 0px;
+                                        background-size: cover;
+                                        min-height: 200px;
+                                        padding-bottom: 1em;
+                                    }
+
+                                    .caption {
+                                        margin-top: 3em;
+                                    }
+
+                                    .navbar-toggle {
+                                        margin-top: 6px;
+                                    }
+
+                                    .navbar-toggle {
+                                        padding: 6px 7px
+                                    }
+
+
+
+
+                                    .banr {
+                                        background: url(../images/banner_10.jpg) no-repeat 0px 0px;
+                                        background-size: cover;
+                                        padding: 0;
+                                        min-height: 70px !important;
+                                    }
+
+
+                                }
+
+                                /* ---------------end styles for header------------ */
+
+
+
+
+
+
+
+
+
+
+
+                                /* ----------------------end header------------- */

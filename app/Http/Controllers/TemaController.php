@@ -245,7 +245,7 @@ public function addCart($id)
         Session::put('Customer', $aggiorna);
               //cosi creo la sessione Aggiorna  con i dati inseriti
         Session::put('Aggiorna', $aggiorna);
-        return redirect('/cart')->with('status', 'You have updtaed info');
+        return redirect('/cart')->with('status', 'You have updated info');
     }
 
     public function ProcediOrdine()

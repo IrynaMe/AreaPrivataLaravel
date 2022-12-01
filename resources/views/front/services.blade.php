@@ -17,7 +17,7 @@
                         <div class="snipcart-item block">
                             <div class="snipcart-thumb">
                                 {{-- <a href="single/{{ $product->id }}"> --}}
-                                <a href="/{{ $service->id }}">
+                                <a href="single/{{ $service->id }}">
 
                                     <h4 style="margin:20px 0 25px 0;"> {{ $service->name }}</h4>
                                     <div style="height:150px;">

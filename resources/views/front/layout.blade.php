@@ -19,7 +19,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
     <link href={{ 'tema/fonts.googleapis.com/css?family=Italiana' }} rel='stylesheet' type='text/css'>
-    <script src="tema/js/jquery-1.11.1.min.js"></script>
+    <script src={{ 'tema/js/jquery-1.11.1.min.js' }}></script>
     <link
         href={{ 'tema/fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' }}
         rel='stylesheet' type='text/css'>
@@ -43,27 +43,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 
+<body>
+
+    @yield('content')
 
 
-@yield('content')
 
-
-
-<!--footer-->
-<div class="footer-section-wthree-agile">
-    <div class="container">
-        <div class="social-icons">
-            <a href="#"><i class="icon1"></i></a>
-            <a href="#"><i class="icon2"></i></a>
-            <a href="#"><i class="icon3"></i></a>
-            <a href="#"><i class="icon4"></i></a>
-        </div>
-        <div class="footer-top-w3ls-agileits">
-            <p>&copy; 2017 Go Travel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
+    <!--footer-->
+    <div class="footer-section-wthree-agile">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="icon1"></i></a>
+                <a href="#"><i class="icon2"></i></a>
+                <a href="#"><i class="icon3"></i></a>
+                <a href="#"><i class="icon4"></i></a>
+            </div>
+            <div class="footer-top-w3ls-agileits">
+                <p>&copy; 2017 Go Travel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a>
+                </p>
+            </div>
         </div>
     </div>
-</div>
-<!--footer-->
+    <!--footer-->
 </body>
 
 </html>

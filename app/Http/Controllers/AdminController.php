@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Order;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\Amministratore;
 use App\Models\Customer;
@@ -139,6 +140,112 @@ class AdminController extends Controller
     }
 
 
+
+    public function createServices()
+    {
+        if (Session::has('amministratore')){
+            return view('ammne.createServices');
+        } else {
+            return redirect('/admin')->with('status', 'You should login as Admin!');  
+        }
+        
+    }
+
+    public function saveService(Request $request)
+    {
+      //
+        $fileName= $request->file('uploadfile')->getClientOriginalName();
+
+        //test che immagine abbia il nome corretto e categoria il numero
+        //indicato in categoria
+        // $fileName = cipolla.png
+        //  print($fileName);
+        //   print($request->input('categoria'));
+
+        /*   se ho caricato un file che al suo interno contiene
+         name="uploadfile"  */
+        if ($request->hasFile('uploadfile')) {
+            //ho caricato il file
+
+//
+            $path=$request->file('uploadfile')->storeAs('public/img_service', $fileName);
+            //$path= public/img_prodotto/cipolla.png
+            // print($path);
+
+            $file = $request->file('uploadfile');
+            // print($file);
+            $path = public_path().'/tema/images';
+            $uplaod = $file->move($path,$fileName);
+        } else {
+            $fileName ='nessuna Immagine';
+        }
+
+        $service = new Service();
+        $service->name = $request->input('nome');
+        $service->description = $request->input('editor1');
+        $service->price= $request->input('prezzo');
+        $service->discount= $request->input('sconto');
+        $service->category = $request->input('categoria');
+        $service->image= 'images/'.$fileName;
+        $service ->save();
+
+       
+        Session::put('success', 'Service saved');
+        return back();
+        // print($fileName);
+
+    }
+    public function listServices()
+    {
+        if (Session::has('amministratore')){
+            $services = Service::paginate(10);
+            return view('ammne.listServices')->with('services', $services );
+        } else {
+            return redirect('/admin')->with('status', 'You must login as Admin!');  
+        }
+       
+    }
+  
+    public function editService($id)
+    {
+        if (Session::has('amministratore')){
+            $service = Service::find($id);
+            return view('ammne.editService')->with('service', $service);
+        } else {
+            return redirect('/admin')->with('status', 'You must login as Admin!');  
+        }
+        
+    }
+
+    public function updateService(Request $request)
+    {
+        //deve catturare le info id, email aggiornata
+        //deve eseguire una query update nel DB
+        // deve tornare a listaUtenti che esehuirà una query sul DB dove il record è stato aggiornato
+        // mette in una sessione che ha nome sucess il valore: Utente aggiornato
+
+        //catturano il dato
+        $service = Service::find($request->input('id'));
+        $service->name=$request->input('nomeUpdate');
+        $service->description=$request->input('descUpdate');
+        //esegue update nel BD
+        $service->update();
+        // mette in una sessione chiamata success il valore utente aggiornato
+        // questo valore viene visualizzato in listaUtenti
+        //NB usare use Session;
+        Session::put('success', 'Service updated');
+        //ritorna alla lista utenti dove viene eseguita la query
+        //con i dati aqggiornati
+        return redirect('/listServices');
+    }
+
+    public function deleteservice($id)
+    {
+        $service =  Service::find($id);
+        $service->delete();
+        Session::put('success', 'Service deleted');
+        return redirect('/listServices');
+    }
     public function ordini()
     {
         $orders = Order::paginate(3);

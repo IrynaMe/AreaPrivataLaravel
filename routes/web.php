@@ -23,6 +23,8 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [TemaController::class, 'home']);
 Route::any('/services', [TemaController::class, 'services']);
 Route::get('/about', [TemaController::class, 'about']);
+//single product
+Route::any('/single/{id}', [TemaController::class, 'single']);
 
 
 //-------------------accesso---------
@@ -42,6 +44,18 @@ Route::any('/login', [AdminController::class, 'login']);
 Route::any('/mustLogin', [TemaController::class, 'mustLogin']);
 Route::any('/logout', [AdminController::class, 'logout']);
 
+
+//-------------------------------------gestire PRODOTTI------------------
+
+Route::any('/createServices', [AdminController::class, 'createServices']);
+//lista prodotti
+Route::get('/listServices', [AdminController::class, 'listServices']);
+//create a new product
+Route::any('/saveService', [AdminController::class, 'saveService']);
+
+//modifica prodotto
+Route::any('/editService/{id}', [AdminController::class, 'editService']);
+Route::any('/updateService', [AdminController::class, 'updateService']);
 
 //-----------------------gestione Utenti
 //crea utenti

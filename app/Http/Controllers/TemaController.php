@@ -21,12 +21,7 @@ class TemaController extends Controller
         {
             return view('front.home');
         }
-        public function services()
-        {
-          
-            $services= Service::paginate(3);
-            return view('front.services')->with('services', $services);
-        }
+        
     public function about()
         {
             return view('front.about');
@@ -37,21 +32,33 @@ class TemaController extends Controller
         }
     public function contatti()
         {
-            //if (Session::has('Customer')){
+        //if (Session::has('Customer')){
                 return view('front.contatti');
 /*             } else {
                 return redirect('/loginUser')->with('status', 'You should login o register!');  
             } */
             // return view('front.contatti');
         }
-    
+    public function services()
+        {
+          
+        $services= Service::paginate(3);
+        return view('front.services')->with('services', $services);
+        }
+
+
+        //single product
+    public function single($id)
+        {
+             $service = Service::find($id);
+
+            return view('front.single')->with('service', $service);
+        }
+
     public function registrati()
         {
-            return view('front.registrati');
+        return view('front.registrati');
         }
-    
-
-
 
 
     public function registraUtente(Request $request)

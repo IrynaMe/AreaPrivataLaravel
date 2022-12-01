@@ -1,6 +1,44 @@
-@extends('front.layout')
-@section('content')
-    {{-- <div class="products-breadcrumb">
+{{-- @extends('front.layout') --}}
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Go Travel a Travel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <link href={{ 'tema/css/bootstrap.css' }} rel="stylesheet" type="text/css" media="all">
+
+    <link href={{ 'tema/css/style.css' }} rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords"
+        content="Go Travel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href={{ 'tema/fonts.googleapis.com/css?family=Italiana' }} rel='stylesheet' type='text/css'>
+    <script src="tema/js/jquery-1.11.1.min.js"></script>
+    <link
+        href={{ 'tema/fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' }}
+        rel='stylesheet' type='text/css'>
+    <link href={{ 'tema/fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700' }} rel='stylesheet'
+        type='text/css'>
+    <link rel="stylesheet" href={{ 'tema/css/font-awesome.min.css' }} />
+
+    <script src={{ 'tema/js/bootstrap.js' }}></script>
+    <script src={{ 'tema/js/responsiveslides.min.js' }}></script>
+    <script>
+        $(function() {
+            $("#slider").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+                pager: true,
+            });
+        });
+    </script>
+
+</head>
+
+{{-- <div class="products-breadcrumb">
         <div class="container-fluid">
             <ul>
                 <li><i class="fa fa-home" aria-hidden="true"></i>
@@ -12,30 +50,42 @@
         </div>
     </div> --}}
 
-    {{--     <div class="container" style="text-align:center">
-        <img src="{{ 'tema/images/thanks1.png' }}" alt="" width="70%">
-        <br>
-        <a href="/"><button class="btn btn-success btn-lg" style="margin-top:20px;margin-bottom:20px">Return to
-                homepage</button></a>
-        <br>
-    </div> --}}
 
-    <div class="thank">
+
+<div class="thank">
+
+</div>
+<div class="bg-text-thank">
+    <h2 style="font-size:50px">Thank you!</h2>
+    <br>
+
+
+    <h3>Check your email to see the order details</h3>
+    <br>
+    <p>Have a good time!</p>
+    <div>
 
     </div>
-    <div class="bg-text-thank">
-        <h2 style="font-size:50px">Thank you!</h2>
-        <br>
+</div>
+<a class="bg-button-thank" href="/"><button class="btn btn-info btn-lg"
+        style="margin-top:20px;margin-bottom:20px">Return to
+        homepage</button></a>
 
-
-        <h3>Check your email to see the order details</h3>
-        <br>
-        <p>Have a good time!</p>
-        <div>
-
+<!--footer-->
+<div class="footer-section-wthree-agile" style="background:rgb(5, 121, 167); !important">
+    <div class="container">
+        <div class="social-icons">
+            <a href="#"><i class="icon1"></i></a>
+            <a href="#"><i class="icon2"></i></a>
+            <a href="#"><i class="icon3"></i></a>
+            <a href="#"><i class="icon4"></i></a>
+        </div>
+        <div class="footer-top-w3ls-agileits">
+            <p>&copy; 2017 Go Travel. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
         </div>
     </div>
-    <a class="bg-button-thank" href="/"><button class="btn btn-success btn-lg"
-            style="margin-top:20px;margin-bottom:20px">Return to
-            homepage</button></a>
-@endsection
+</div>
+<!--footer-->
+</body>
+
+</html>

@@ -85,7 +85,7 @@
                                     Privacy Policy</label>
                             </div>
 
-                            <button type="submit" class="btn btn-success btn-block">REGISTER</button>
+                            <button type="submit" class="btn btn-info btn-block">REGISTER</button>
                         </form>
                         <div class="text-center">
                             <br>

@@ -28,18 +28,20 @@
                                     <h4 style="margin:20px 0 25px 0;"> {{ $service->name }}</h4>
                                     <div style="height:150px;">
                                         <img title=" {{ $service->image }}" alt=" {{ $service->image }}"
-                                            src="tema/{{ $service->image }}" style="max-height:150px;" />
+                                            src="tema/{{ $service->image }}" style="width: 300px; max-height:150px;" />
                                     </div>
                                 </a>
+                                <br>
                                 <div class="snipcart-item block">
                                     <div class="snipcart-thumb">
                                         <b> Price:
-                                            {{ $service->price }}. €;</b>
+                                            {{ $service->price }}. €</b>
 
                                     </div>
                                 </div>
 
                             </div>
+                            <br>
                             <div class="snipcart-details top_brand_home_details">
                                 <form action="{{ url('/addcart/' . $service->id) }}" method="post">
                                     @csrf
@@ -49,7 +51,8 @@
                                         <input type="hidden" name="business" value=" " />
                                         <input type="hidden" name="item_name" value="{{ $service->name }}" />
                                         <input type="hidden" name="amount" value="{{ $service->price }}" />
-                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                        <input type="submit" name="submit" value="Add to cart"
+                                            class="button btn btn-info" />
                                         <input type="hidden" name="service_id" value="{{ $service->id }}">
                                     </fieldset>
                                 </form>

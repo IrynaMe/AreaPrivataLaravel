@@ -79,7 +79,7 @@
                         <br>
 
                         <br>
-                        <button type="submit" class="btn btn-success btn-block">Submit</button>
+                        <button type="submit" class="btn btn-info btn-block">Submit</button>
 
                     </form>
 

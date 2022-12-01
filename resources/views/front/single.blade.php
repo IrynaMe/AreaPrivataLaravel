@@ -143,53 +143,53 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     <br>
     <br>
-    <br>
 
 
 
 
     <div class="container">
         <div class="agileinfo_single">
+            <br>
+            <br>
 
-            <div class="col-md-4 agileinfo_single_left">
+            <div class="col-md-6 agileinfo_single_left">
 
-                <img style="width:450px;" title="{{ $service->name }}" alt="{{ $service->name }}"
+                <img style="width:500px;" title="{{ $service->name }}" alt="{{ $service->name }}"
                     src="{{ '../tema/' . $service->image }}" class="img-responsive" id="example" />
             </div>
-            <div class="col-md-8 agileinfo_single_right">
+            <div class="col-md-6 agileinfo_single_right"
+                style="margin-top: -50px !important; margin-bottom: -30px !important;">
+                <div class="service w3layouts-agileits" style=" margin-bottom: -30px !important;">
+                    <h3 style="text-align:center;">{{ $service->name }}</h3>
+                </div>
 
                 <div class="w3agile_description">
-                    <h5>{{ $service->name }}</h5>
-                    <h4>Descrizione :</h4>
+                    <h3>Description :</h3>
+                    <br>
                     <p>{{ $service->description }}</p>
                 </div>
                 <div class="snipcart-item block">
                     <div class="snipcart-thumb agileinfo_single_right_snipcart">
-                        @if ($service->discount > 0)
-                            <p><del style="font-size:12px;color:gray;">
-                                    {{ $service->price }} €
-                                    <br>
-                                    <p>
-                                        <b>
-                                            scontato a:
-                                            {{ $service->discount }} €;
+                        <br>
+                        <b>
+                            Price:
+                            {{ $service->price }}. € </b>
 
-                                        </b>
-                                    </p>
-                                @else
-                                    <br>
-                                    prezzo:
-                                    {{ $service->price }}. €
-                        @endif
+
                     </div>
+                    <br>
                     <div class="snipcart-details
                             agileinfo_single_right_details">
-                        <form action="#" method="post">
+                        <form action="{{ url('/addcart/' . $service->id) }}" method="post">
+                            @csrf
                             <fieldset>
                                 <input type="hidden" name="cmd" value="_cart" />
                                 <input type="hidden" name="add" value="1" />
-                                <input type="hidden" name="service_id" value=" {{ $service->id }}">
-                                <input type="submit" name="submit" value="Acquista" class="button" />
+                                <input type="hidden" name="business" value=" " />
+                                <input type="hidden" name="item_name" value="{{ $service->name }}" />
+                                <input type="hidden" name="amount" value="{{ $service->price }}" />
+                                <input type="submit" name="submit" value="Add to cart" class="button btn btn-info" />
+                                <input type="hidden" name="service_id" value="{{ $service->id }}">
                             </fieldset>
                         </form>
                     </div>

@@ -106,8 +106,7 @@
                             </div>
                             <div class="col-md-3">
                                 {{--    <input type="submit" class="btn btn-success btn-send" value="Send message"> --}}
-                                <button type="submit" id="submit" name="submit"
-                                    class="btn btn-block btn-success">Send
+                                <button type="submit" id="submit" name="submit" class="btn btn-block btn-info">Send
                                     message</button>
                             </div>
                             <div style="text-align:center;" id="invio">

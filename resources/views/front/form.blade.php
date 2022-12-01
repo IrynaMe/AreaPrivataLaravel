@@ -34,9 +34,13 @@
 
     <div class="row">
         <div class="col-md-6">
-            <br>
-            <h1 style="color:rgb(62, 56, 76); text-align:center;" id="title1">Write your message here</h1>
-            <br>
+
+
+            <div class="service w3layouts-agileits">
+                <h3 style="text-align:center;">Write us</h3>
+            </div>
+            {{-- <h1 style="color:rgb(62, 56, 76); text-align:center;" id="title1">Write your message here</h1> --}}
+
             <br>
             <div class="col-xl-8 offset-xl-2 py-5">
 
@@ -142,9 +146,12 @@
 
         </div>
         <div class="col-md-6">
-            <br>
-            <h1 style="color:rgb(62, 56, 76); text-align:center;" id="title1">Contact us</h1>
-            <br>
+
+            <div class="service w3layouts-agileits">
+                <h3 style="text-align:center;">Our contacts</h3>
+            </div>
+            {{-- <h1 style="color:rgb(62, 56, 76); text-align:center;" id="title1">Contact us</h1> --}}
+
 
             {{-- 
             <h4>Address: Nice Square, 1 </h4>

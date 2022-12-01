@@ -33,13 +33,13 @@ class AdminController extends Controller
                     Session::put('amministratore', $Amministratore);
                     // echo 'passo da qui';
            
-                    return redirect('/dashboard')->with('status', 'Admin loggato correttamente');
+                    return redirect('/dashboard')->with('status', 'Admin logged in successfully');
                 
                 } else {
-                    return back()->with('status', 'Email o password non corretta');
+                    return back()->with('status', 'Wrong email or password');
                 }
             } else {
-                return back()->with('status', 'Non hai un account con questa email');
+                return back()->with('status', 'Threre is no account with this email');
             }
         }
     
@@ -56,7 +56,7 @@ class AdminController extends Controller
             if (Session::has('amministratore')){
                 return view('ammne.dashboard');
             } else {
-                return redirect('/admin')->with('status', 'You should login as Admin!');  
+                return redirect('/admin')->with('status', 'You must login as Admin!');  
             }
             // return view('ammne.dashboard');
         }
@@ -108,7 +108,7 @@ class AdminController extends Controller
         // questo valore viene visualizzato in listaUtenti
         //NB usare use Session;
 
-        Session::put('success', 'Utente aggiornato');
+        Session::put('success', 'User updated!');
 
         //ritorna alla lista utenti dove viene eseguita la query
         //con i dati aqggiornati
@@ -123,7 +123,7 @@ class AdminController extends Controller
         $customer->name=$request->name_utente;
         $customer->save();
 
-        Session::put('success', 'Utente creato');
+        Session::put('success', 'User created!');
 
         return redirect('/creaUtenti');
 
@@ -135,7 +135,7 @@ class AdminController extends Controller
         $customer = Customer::find($id);
 
         $customer->delete();
-        Session::put('success', 'Utente Cancellato');
+        Session::put('success', 'User deleted');
         return redirect('/listaUtenti');
     }
 
@@ -146,7 +146,7 @@ class AdminController extends Controller
         if (Session::has('amministratore')){
             return view('ammne.createServices');
         } else {
-            return redirect('/admin')->with('status', 'You should login as Admin!');  
+            return redirect('/admin')->with('status', 'You must login as Admin!');  
         }
         
     }
@@ -184,8 +184,7 @@ class AdminController extends Controller
         $service->name = $request->input('nome');
         $service->description = $request->input('editor1');
         $service->price= $request->input('prezzo');
-        $service->discount= $request->input('sconto');
-        $service->category = $request->input('categoria');
+
         $service->image= 'images/'.$fileName;
         $service ->save();
 

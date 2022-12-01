@@ -33,8 +33,11 @@
         <div class="row ">
             <div class="col-md-6  col-md-offset-3" style="margin-top:2%">
                 <div class="form-box">
-                    <h1 style="color:rgb(62, 56, 76); text-align:center;" id="log">Login</h1>
-                    <br>
+                    <div class="service w3layouts-agileits">
+                        <h3 style="text-align:center;">Login</h3>
+                    </div>
+                    {{-- <h1 style="color:rgb(62, 56, 76); text-align:center;" id="log">Login</h1> --}}
+
 
 
                     <form role="form" id="contact-form" action="/accesso" method="post"

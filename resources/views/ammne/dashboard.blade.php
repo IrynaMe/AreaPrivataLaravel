@@ -36,6 +36,10 @@
                     Go back to website
                 </a>
                 <br>
+                <a class="nav-link nav-pills bck" id="v-pills-profile-tab" href={{ '/createServices' }}>
+                    Create services
+                </a>
+                <br>
                 <a class="nav-link nav-pills bck" id="v-pills-profile-tab" href={{ '/listServices' }}>
                     Services list
                 </a>

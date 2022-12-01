@@ -21,7 +21,10 @@
 
     <div class="container my-3" style="padding:10px;text-align: center;">
         <div class="row">
-            <h3><span>Checkout</span></h3>
+            <div class="service w3layouts-agileits">
+                <h3 style="text-align:center;">Checkout</h3>
+            </div>
+            {{-- <h3><span>Checkout</span></h3> --}}
 
             <div class="checkout-right">
                 <h4 style="padding:10px;">Your shopping cart contains: <span>

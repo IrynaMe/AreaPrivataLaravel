@@ -30,9 +30,11 @@
     <div class="global-container">
         <div class="card login-form" style="text-align:center; margin: 0 auto; width:40%;">
             <div class="card-body">
-                <h3 class="card-title text-center">
-                    Login as Admin</h3>
-                <br>
+                <div class="service w3layouts-agileits">
+                    <h3 style="text-align:center;">Login as admin</h3>
+                </div>
+                {{--                 <h3 class="card-title text-center">
+                    Login as Admin</h3> --}}
 
                 <div class="card-text">
                     <form action="/loginAmmre" method="post">

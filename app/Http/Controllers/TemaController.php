@@ -149,7 +149,9 @@ class TemaController extends Controller
     {
         Session::forget('Customer');
         Session::forget('customerName');
-
+        if (Session::has('cart')) {
+            Session::forget('cart');
+        } 
         return redirect('/');
 
     }

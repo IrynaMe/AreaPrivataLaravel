@@ -46,7 +46,7 @@
                             <div class="col-md-4 header-grid">
                                 <div class="header-bg">
                                     <img src={{ 'tema/images/p1.jpg' }} class="img-responsive" alt="">
-                                    <h4>Beautiful places </h4>
+                                    <h4>Marvelous places </h4>
                                     {{--                                     <p>Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit
                                         justo, in ven e natis purus.</p> --}}
                                 </div>
@@ -62,7 +62,7 @@
                             <div class="col-md-4 header-grid">
                                 <div class="header-bg">
                                     <img src={{ 'tema/images/p3.jpg' }} class="img-responsive" alt="">
-                                    <h4>Good services</h4>
+                                    <h4>Excellent services</h4>
                                     {{--                                     <p>Cras consequat iaculis lorem, id vehicula erat mattis quis. Vivamus laoreet velit
                                         justo, in ven e natis purus.</p> --}}
                                 </div>

@@ -78,7 +78,7 @@
 
                                                     <div class="col-md-6">
 
-                                                        <input type="submit" class="btn btn-success" value="Update Qty"
+                                                        <input type="submit" class="btn btn-info" value="Update Qty"
                                                             min="1" max="80">
                                                     </div>
                                                 </div>
@@ -113,8 +113,10 @@
                 </table>
             </div>
             <div class="checkout-left">
-                <div class="col-md-4 checkout-left-basket">
-                    <h4>Continue to basket</h4>
+                <div class="col-md-4 ">
+                    <a style="text-decoration: none !important;" href={{ '/services' }}>
+                        <h4 class="btn btn-block btn-info ">Continue choosing services</h4>
+                    </a>
                     <ul>
                         @if (Session::has('cart'))
                             <table class="table text-center">
@@ -227,7 +229,7 @@
                                                 name="nazione" value="{{ Session('Customer')->nazione }}">
                                         </div>
                                     </div>
-                                    <button class="submit check_out">Delivery to this Address</button>
+                                    <button class="submit check_out btn btn-info">Delivery to this Address</button>
                                 </div>
                             </section>
                         </form>
@@ -237,9 +239,9 @@
                                 // print Session('Order');
                             @endphp
                             @if (Session::has('cart'))
-                                <div class="checkout-right-basket">
+                                <div class=" btn btn-warning">
                                     <a href="/ProcediOrdine">Go to payment <span class="glyphicon glyphicon-chevron-right"
-                                            aria-hidden="true"></span></a>
+                                            aria-hidden="true"> </span></a>
 
                                 </div>
                             @endif

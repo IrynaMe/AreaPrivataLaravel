@@ -229,7 +229,7 @@
                                                 name="nazione" value="{{ Session('Customer')->nazione }}">
                                         </div>
                                     </div>
-                                    <button class="submit check_out btn btn-info">Delivery to this Address</button>
+                                    <button class="submit check_out btn btn-info">Delivery to this address</button>
                                 </div>
                             </section>
                         </form>
@@ -240,8 +240,9 @@
                             @endphp
                             @if (Session::has('cart'))
                                 <div class=" btn btn-warning">
-                                    <a href="/ProcediOrdine">Go to payment <span class="glyphicon glyphicon-chevron-right"
-                                            aria-hidden="true"> </span></a>
+                                    <a style="text-decoration:none !important; color:white !important;"
+                                        href="/ProcediOrdine">Go to payment <span
+                                            class="glyphicon glyphicon-chevron-right" aria-hidden="true"> </span></a>
 
                                 </div>
                             @endif

@@ -251,7 +251,7 @@
                         <div class="col-md-4"></div>
 
                         <a href={{ '/loginUser' }} class="offset-md-4">
-                            <button class="btn btn-success">You must login to continue</button>
+                            <button class="btn btn-warning">You must login to continue</button>
 
 
                         </a>

@@ -48,8 +48,8 @@ https://daneden.github.io/animate.css/
 
     <!----style--->
 
-    {{--  <link rel="stylesheet" href={{ 'tema/css/bootstrap.css' }}> --}}
-    <link rel="stylesheet" href={{ 'tema/css/bootstrap.min.css' }}>
+    {{--  <link rel="stylesheet" href={{ 'public/tema/css/bootstrap.css' }}> --}}
+    <link rel="stylesheet" href={{ 'public/tema/css/bootstrap.min.css' }}>
     <link rel="stylesheet" href={{ '../ammne/css/style.css' }}>
     <!----font awesome--->
     <script src={{ 'https://kit.fontawesome.com/ab2cd30c6b.js' }} crossorigin="anonymous"></script>

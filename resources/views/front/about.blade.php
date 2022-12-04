@@ -28,13 +28,13 @@
                 </div>
                 <div class="about-imgs">
                     <div class="col-md-4 about-img">
-                        <img src={{ 'tema/images/a1.jpg' }} class="img-responsive" alt="/">
+                        <img src={{ 'public/tema/images/a1.jpg' }} class="img-responsive" alt="/">
                     </div>
                     <div class="col-md-4 about-img">
-                        <img src={{ 'tema/images/a2.jpg' }} class="img-responsive" alt="/">
+                        <img src={{ 'public/tema/images/a2.jpg' }} class="img-responsive" alt="/">
                     </div>
                     <div class="col-md-4 about-img">
-                        <img src={{ 'tema/images/a3.jpg' }} class="img-responsive" alt="/">
+                        <img src={{ 'public/tema/images/a3.jpg' }} class="img-responsive" alt="/">
                     </div>
                     <div class="clerafix"></div>
                 </div>
@@ -79,7 +79,7 @@
                 <h3>Certification Programs</h3>
                 <div class="new-course-grids">
                     <div class="col-md-6 new-course-grid">
-                        <img src={{ 'tema/images/p7.jpg' }} class="img-responsive" alt="" />
+                        <img src={{ 'public/tema/images/p7.jpg' }} class="img-responsive" alt="" />
                         <div class="course-info">
                             <h4>Encididunt Ut</h4>
                             <p>Mauris fermentum tortor non enim aliquet condimentum nam aliquam pretium feugiat duis sem est
@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     <div class="col-md-6 new-course-grid">
-                        <img src={{ 'tema/images/p8.jpg' }} class="img-responsive" alt="" />
+                        <img src={{ 'public/tema/images/p8.jpg' }} class="img-responsive" alt="" />
                         <div class="course-info">
                             <h4>Magna Aliqua</h4>
                             <p>Mauris fermentum tortor non enim aliquet condimentum nam aliquam pretium feugiat duis sem est

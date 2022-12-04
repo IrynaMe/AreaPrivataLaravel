@@ -52,8 +52,9 @@
                                     <td class="invert">1</td>
                                     <td class="invert-image">
 
-                                        <a href="#"><img src="/tema/{{ $service['service_image'] }}" alt=" "
-                                                class="img-responsive" style="height: 50px; width: auto;"></a>
+                                        <a href="#"><img src="/public/tema/{{ $service['service_image'] }}"
+                                                alt=" " class="img-responsive"
+                                                style="height: 50px; width: auto;"></a>
                                     </td>
                                     {{-- <td class="invert">
                                     <div class="quantity">

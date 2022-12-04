@@ -310,10 +310,10 @@
 
 
 
-    <script src=" {{ 'tema/payments_styles/js/jquery-1.11.1.min.js' }}"></script>
+    <script src=" {{ 'public/tema/payments_styles/js/jquery-1.11.1.min.js' }}"></script>
     <!-- easy-responsive-tabs -->
-    <link rel="stylesheet" type="text/css" href="{{ 'tema/payments_styles/css/easy-responsive-tabs.css' }} " />
-    <script src="{{ 'tema/payments_styles/js/easyResponsiveTabs.js' }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ 'public/tema/payments_styles/css/easy-responsive-tabs.css' }} " />
+    <script src="{{ 'public/tema/payments_styles/js/easyResponsiveTabs.js' }}"></script>
     <!-- //easy-responsive-tabs -->
     <script type="text/javascript">
         $(document).ready(function() {
@@ -375,8 +375,8 @@
     </script>
     <!-- //script-for sticky-nav -->
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="{{ 'tema/payments_styles/js/move-top.js' }}"></script>
-    <script type="text/javascript" src="{{ 'tema/payments_styles/js/easing.js' }}"></script>
+    <script type="text/javascript" src="{{ 'public/tema/payments_styles/js/move-top.js' }}"></script>
+    <script type="text/javascript" src="{{ 'public/tema/payments_styles/js/easing.js' }}"></script>
     <script type="text/javascript">
         jQuery(document).ready(function($) {
             $(".scroll").click(function(event) {
@@ -389,7 +389,7 @@
     </script>
     <!-- start-smoth-scrolling -->
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ 'tema/payments_styles/js/bootstrap.min.js' }}"></script>
+    <script src="{{ 'public/tema/payments_styles/js/bootstrap.min.js' }}"></script>
     <script>
         $(document).ready(function() {
             $(".dropdown").hover(

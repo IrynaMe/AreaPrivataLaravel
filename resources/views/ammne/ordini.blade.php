@@ -90,7 +90,7 @@
                                                     <div class="row">
 
                                                         <div class="col-md-3">
-                                                            <img src="{{ url('tema/' . $item['service_image']) }}"
+                                                            <img src="{{ url('public/tema/' . $item['service_image']) }}"
                                                                 alt="" style="width:30px;height:30px">
                                                         </div>
                                                         <div class="col-md-3">{{ $item['service_price'] }}</div>
@@ -143,7 +143,7 @@
                                                     <div class="row">
 
                                                         <div class="col-md-3">
-                                                            <img src="{{ url('tema/' . $item['service_image']) }}"
+                                                            <img src="{{ url('public/tema/' . $item['service_image']) }}"
                                                                 alt="" style="width:30px;height:30px">
                                                         </div>
                                                         <div class="col-md-3">{{ $item['service_price'] }}</div>

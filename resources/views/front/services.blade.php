@@ -28,7 +28,8 @@
                                     <h4 style="margin:20px 0 25px 0;"> {{ $service->name }}</h4>
                                     <div style="height:150px;">
                                         <img title=" {{ $service->image }}" alt=" {{ $service->image }}"
-                                            src="tema/{{ $service->image }}" style="width: 300px; max-height:150px;" />
+                                            src="public/tema/{{ $service->image }}"
+                                            style="width: 300px; max-height:150px;" />
                                     </div>
                                 </a>
                                 <br>
@@ -65,13 +66,13 @@
 
 
             {{--             <div class="col-md-4 student-grid">
-                <img src={{"tema/images/p5.jpg"}} class="img-responsive" alt="">
+                <img src={{"public/tema/images/p5.jpg"}} class="img-responsive" alt="">
                 <h4>Tour 2</h4>
                 <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut neque
                     purus, sollic alitudin non ante ac, malesuada. condimentum libero.</p>
             </div>
             <div class="col-md-4 student-grid">
-                <img src={{"tema/images/p6.jpg"}} class="img-responsive" alt="">
+                <img src={{"public/tema/images/p6.jpg"}} class="img-responsive" alt="">
                 <h4>Tour 3</h4>
                 <p>Lorem ipsum dolor sit amet, consectscing elit. Maecenas moleset alldbus id ictum. Ut neque
                     purus, sollic alitudin non ante ac, malesuada. condimentum libero.</p>

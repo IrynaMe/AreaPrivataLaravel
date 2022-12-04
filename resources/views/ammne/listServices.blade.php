@@ -47,7 +47,8 @@
 
                                 {{-- <td scope="col">{{ $service->image}}</td> --}}
                                 <td>
-                                    <img style="width:100px;" src="tema/{{ $service->image }}" alt="{{ $service->name }}">
+                                    <img style="width:100px;" src="public/tema/{{ $service->image }}"
+                                        alt="{{ $service->name }}">
                                 </td>
 
                                 <td scope="col">

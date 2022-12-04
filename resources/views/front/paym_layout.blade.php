@@ -19,11 +19,12 @@
             }
         </script>
     <!-- //for-mobile-apps -->
-    <link href="{{ 'tema/payments_styles/css/bootstrap.css' }}" rel="stylesheet" type="text/css" media="all" />
-    <link href=" {{ 'tema/payments_styles/css/style.css' }}" rel=" stylesheet" type="text/css" media="all" />
-    <link href=" {{ 'tema/css/style.css' }}" rel=" stylesheet" type="text/css" media="all" />
+    <link href="{{ 'public/tema/payments_styles/css/bootstrap.css' }}" rel="stylesheet" type="text/css" media="all" />
+    <link href=" {{ 'public/tema/payments_styles/css/style.css' }}" rel=" stylesheet" type="text/css" media="all" />
+    <link href=" {{ 'public/tema/css/style.css' }}" rel=" stylesheet" type="text/css" media="all" />
     <!-- font-awesome icons -->
-    <link href="{{ 'tema/payments_styles/css/font-awesome.css' }}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{{ 'public/tema/payments_styles/css/font-awesome.css' }}" rel="stylesheet" type="text/css"
+        media="all" />
     <!-- //font-awesome icons -->
 
     <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic'

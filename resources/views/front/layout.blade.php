@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 
 <head>
-    <title>Go Travel a Travel Category Flat Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <title>GoTravel agency</title>
     <link href={{ 'public/tema/css/bootstrap.css' }} rel="stylesheet" type="text/css" media="all">
 
     <link href={{ 'public/tema/css/style.css' }} rel="stylesheet" type="text/css" media="all" />

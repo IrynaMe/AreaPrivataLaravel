@@ -6,7 +6,7 @@
                 @include('ammne/dashboard')
 
             </div>
-            <div class="col-md-9 " style="text-align: center">
+            <div class="col-md-9 col-sm-12" style="text-align: center">
                 <div class="alert alert-success" role="alert">
                     @if (Session::has('success'))
                         {{ Session::get('success') }}

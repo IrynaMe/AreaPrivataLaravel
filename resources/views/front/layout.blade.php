@@ -50,7 +50,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
     <!--footer-->
-    <div class="footer-section-wthree-agile">
+    <div class="footer-section-wthree-agile footerTravel">
         <div class="container">
             <div class="social-icons">
                 <a href="#"><i class="icon1"></i></a>

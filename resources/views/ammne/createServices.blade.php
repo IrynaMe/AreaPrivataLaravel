@@ -14,10 +14,10 @@
     </div>
     <div class="container-fluid" style="margin-top:50px">
         <div class="row">
-            <div class="col-3">
+            <div class="col-md-3 col-sm-12">
                 @include('ammne/dashboard')
             </div>
-            <div class="col-9">
+            <div class="col-md-9 col-sm-12">
                 @include('ammne/form_service')
             </div>
         </div>

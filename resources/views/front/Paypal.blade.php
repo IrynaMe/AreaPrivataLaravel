@@ -12,7 +12,7 @@
     <input type="hidden" name="city" value="{{ Session('Aggiorna')->citta }}">
     <input type="hidden" name="country" value="IT">
     <input type="hidden" name="currency_code" value="EUR">
-    <input type="hidden" name="return" value="https://travel.netsons.org/grazie">
+    <input type="hidden" name="return" value="https:travel.netsons.org/grazie">
 
     <input type="image" src="https://www.sandbox.paypal.com/en_US/IT/i/btn/btn_buynowCC_LG.gif" border="0"
         name="submit" alt="PayPal - The safer, easier way to pay online!">

@@ -104,7 +104,7 @@
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-3" style="min-width:160px !important;">
                                 {{--    <input type="submit" class="btn btn-success btn-send" value="Send message"> --}}
                                 <button type="submit" id="submit" name="submit" class="btn btn-block btn-info">Send
                                     message</button>
@@ -144,7 +144,7 @@
             </div>
 
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 col-sm-12 ourContacts">
 
             <div class="service w3layouts-agileits">
                 <h3 style="text-align:center;">Our contacts</h3>

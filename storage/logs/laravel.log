@@ -350,3 +350,35 @@
 [stacktrace]
 #0 {main}
 "} 
+[2022-12-04 20:30:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:31:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:32:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:33:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:34:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:35:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:36:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 
+[2022-12-04 20:37:00] local.ERROR: Cannot declare class App\Cart, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class App\\Cart, because the name is already in use at /Applications/MAMP/htdocs/AreaPrivataLaravel/app/Cart_.php:5)
+[stacktrace]
+#0 {main}
+"} 

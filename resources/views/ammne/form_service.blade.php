@@ -13,7 +13,7 @@
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Description</label>
                 <textarea class="ckeditor" id="editor1" name="editor1" rows="3" required="">
-  </textarea>
+                </textarea>
                 <script>
                     CKEDITOR.replace('editor1');
                 </script>
@@ -27,19 +27,19 @@
                         required="">
                 </div>
             </div>
-            <div class="col-sm">
-                {{--                 <div class="mb-3">
+            {{--  <div class="col-sm">
+                               <div class="mb-3">
 
                     <label for="exampleFormControlInput1" class="form-label">Sconto</label>
                     <input type="text" class="form-control" id="exampleFormControlInput1" name="sconto"
                         required="">
-                </div> --}}
-            </div>
+                </div> 
+            </div> --}}
         </div>
-    </div>
-    <div class="row">
+
+        {{--  <div class="row">
         <div class="col-sm-12 col-md-12">
-            {{--             <div class="mb-3">
+                        <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Categoria</label>
                 <select name="categoria">
                     <option value="1">Vegetali</option>
@@ -49,19 +49,24 @@
                     <option value="6">Dolci</option>
                     <option value="8">Pane</option>
                 </select>
-            </div> --}}
-        </div>
+            </div> 
+        </div> --}}
         <div class="row">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Insert image</label>
-                <input name="uploadfile" id="uploadfile" type="file" class="form-control form-control-sm"
-                    aria-describedby="upload" required="">
-            </div>
-            <button type="submit" class="btn btn-primary btn-block" name="Inserisci">Submit</button>
-            <div style="text-align:center; font-size:22px">
+            <div class="col-sm">
+                <div class="mb-3 insertImg">
 
+
+                    <label for="exampleFormControlInput1" class="form-label">Insert image</label>
+                    <input name="uploadfile" id="uploadfile" type="file" class="form-control form-control-sm"
+                        aria-describedby="upload" required="">
+                </div>
             </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" name="Inserisci">Submit</button>
+        <div style="text-align:center; font-size:22px">
 
         </div>
+
     </div>
+
 </form>

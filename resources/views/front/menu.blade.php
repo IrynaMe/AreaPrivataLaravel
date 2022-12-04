@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <h1><a href="index.html"><span>Go</span> Travel</a></h1>
+                    <h1><a href="/"><span>Go</span> Travel</a></h1>
                 </div>
             </div>
 

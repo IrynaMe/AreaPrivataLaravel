@@ -342,21 +342,22 @@ body {
 .navbar-default .navbar-nav>li>a:hover,
 .navbar-default .navbar-nav>li>a:focus {
     color: #fff;
-    background-color: #eb5424;
+    background-color: #5bc0de;
+    /* background-color: #5bc0de; */
 }
 
 .navbar-default .navbar-nav>.active>a,
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #eb5424;
+    background-color: #5bc0de;
 }
 
 .dropdown-menu>li>a:hover,
 .dropdown-menu>li>a:focus {
     color: #fff;
     text-decoration: none;
-    background-color: #eb5424;
+    background-color: #5bc0de;
 }
 
 .navbar {
@@ -378,7 +379,7 @@ body {
 .navbar-default .navbar-nav>.open>a:hover,
 .navbar-default .navbar-nav>.open>a:focus {
     color: #fff;
-    background-color: #eb5424;
+    background-color: #5bc0de;
 }
 
 .dropdown-menu>li>a {
@@ -423,7 +424,7 @@ body {
 }
 
 .navbar-brand span {
-    color: #eb5424;
+    color: orange;
 }
 
 .navbar-brand h1 a:hover {
@@ -469,7 +470,7 @@ body {
 }
 
 .caption span {
-    color: #eb5424;
+    color: #5bc0de;
 }
 
 .rslides li {
@@ -612,7 +613,7 @@ h2.short,
 
 .about-grid-left h4 {
     margin: 0;
-    color: #eb5424;
+    color: orange;
     font-size: 1.8em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     text-transform: uppercase;
@@ -705,7 +706,7 @@ h2.short,
 .student-grid h4 {
     font-size: 1.8em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: #eb5424;
+    color: orange;
     text-transform: uppercase;
     margin: .5em 0;
     letter-spacing: 1px;
@@ -1148,7 +1149,7 @@ h2.short,
 .feature1 h4 {
     font-size: 1.8em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: #eb5424;
+    color: #5bc0de;
     padding: 1em 0 0.5em;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -1213,7 +1214,7 @@ h2.short,
 .service-grid1 h4 {
     font-size: 1.8em;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    color: #eb5424;
+    color: #5bc0de;
     margin: 0em 0 0.5em;
     text-align: left;
     text-transform: uppercase;

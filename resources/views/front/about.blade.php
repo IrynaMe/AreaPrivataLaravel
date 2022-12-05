@@ -12,19 +12,14 @@
             <div class="container">
                 <h2>Who We Are</h2>
                 <div class="about-info">
-                    <h5>ALIQUAM DAPIBUS TINCIDUNT METUS. PRAESENT JUSTO DOLOR, LOBORTIS QUIS, LOBORTIS DIGNISSIM, PULVINAR
-                        AC, LOREM. VESTIBULUM SED ANTE. DONEC SAGITTIS EUISMOD PURUS. MAURIS FERMENTUM DICTUM MAGNA. </h5>
+                    <h5>ALIQUAM DAPIBUS TINCIDUNT METUS. PRAESENT DIGNISSIM, PULVINAR
+                        AC, LOREM </h5>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime
                         placeat facere possimus, omnis voluptas assumenda est, omnis epellendus. Temporibus autem quibusdam
                         et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et
-                        molestiae non recusandae.Itaque earum rerum hic tenetur Fusce suscipit varius mi. Cum sociis natoque
-                        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce feugiat malesuada odio.
-                        Morbi nunc odio, gravida at, cursus nec, luctus a, lorem. Maecenas tristique orci ac sem dis
-                        parturient montes. Duis ultricies pharetra magna.</p>
-                    <p>lorem Ipsum is simply dummy text of the printing and typesetting industry., Lorem Ipsum dummy text
-                        ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in
-                        voluptate velit esse when an,Lorem Ipsum has been the industry's standard dummy text ever since
-                        dummy text of the printing and usings 1500s,</p>
+                        molestiae non recusandae.lorem Ipsum is simply dummy text of the printing and typesetting industry.,
+                        Lorem Ipsum dummy text debitis aut rerum ever since dummy text of the printing and usings.</p>
+
                 </div>
                 <div class="about-imgs">
                     <div class="col-md-4 about-img">

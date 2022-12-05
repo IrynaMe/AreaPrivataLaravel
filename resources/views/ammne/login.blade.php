@@ -53,7 +53,7 @@
                             <label class="form-check-label" for="exampleCheck1">
                                 Show Password</label>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                        <button type="submit" class="btn btn-info btn-block">Submit</button>
 
                     </form>
                 </div>

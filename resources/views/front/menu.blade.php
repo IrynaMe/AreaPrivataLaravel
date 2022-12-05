@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-                    <h1><a href="/"><span>Go</span> Travel</a></h1>
+                    <h1><a href="/"><span> &nbsp;Go</span> Travel</a></h1>
                 </div>
             </div>
 
@@ -24,7 +24,7 @@
         <div class="row">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <div class="col-9">
+                <div class="col-md-9">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active"><a href={{ '/' }}>Home <span class="sr-only">(current)</span></a>
                         </li>
@@ -51,7 +51,7 @@
 
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-3">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href={{ '/login' }}>Admin </a>
                         </li>

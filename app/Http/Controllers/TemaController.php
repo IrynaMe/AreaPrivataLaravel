@@ -11,6 +11,7 @@ use App\Cart;
 use Session;
 use Illuminate\Validation\Rules\Password;
 
+
 //use Illuminate\Support\Facades\Redirect;
 // use Illuminate\Support\Facades\URL;
 
@@ -19,7 +20,11 @@ class TemaController extends Controller
 {
     public function home()
         {
-            return view('front.home');
+            
+            $servicesOrder= Service::orderBy('price', 'ASC')->get();
+            $services = $servicesOrder->slice(0,3);
+            // $services=Service::all();
+            return view('front.home')->with('services', $services);
         }
         
     public function about()
